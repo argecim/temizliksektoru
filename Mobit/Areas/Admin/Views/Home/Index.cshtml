@@ -1,0 +1,119 @@
+﻿@model List<Mobit.Data.Context.Kurumlar>
+@{
+    ViewBag.Title = "Ana Sayfa";
+}
+<div class="col-lg-12">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success">Kategoriler</span>
+
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.kategoriSayi</h1>
+                    <small>Kayıt</small>
+                    <div class="stat-percent font-bold text-success"><a href="/Admin/Category">Tüm Kategoriler</a> <i class="fa fa-list"></i></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info">Alt Kategoriler</span>
+
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.altKategoriSayi</h1>
+                    <div class="stat-percent font-bold text-info"><a href="/Admin/Category/SubCategory">Tüm Alt Kategoriler</a> <i class="fa fa-list"></i></div>
+
+                    <small>Kayıt</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-primary">Kurumlar</span>
+
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.kurumSayi</h1>
+                    <div class="stat-percent font-bold text-primary"><a href="/Admin/Kurum">Tüm Kurumlar</a> <i class="fa fa-list"></i></div>
+                    <small>Kayıt</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-danger">Haberler</span>
+
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.haberler</h1>
+
+                    <div class="stat-percent font-bold text-danger"><a href="/Admin/News">Tüm Haberler</a> <i class="fa fa-list"></i></div>
+
+                    <small>Kayıt</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />
+
+@Html.Partial("/Areas/Admin/Views/_Partial/Kurumlar.cshtml", Model)
+
+
+@section Styles {
+    @Styles.Render("~/admin/Content/plugins/dataTables/dataTablesStyles")
+}
+
+@section scripts{
+@Scripts.Render("~/admin/plugins/dataTables")
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.dataTables-example').DataTable({
+                "order": [[0, "desc"]],
+                //"scrollX": true,
+                "lengthMenu": [[50, 75, 100, -1], [50, 75, 100, "All"]],
+                dom: '<"html5buttons"B>lTfgitp',
+                responsive: true,
+                buttons: [
+                    { extend: 'copy' },
+                    { extend: 'csv' },
+                    { extend: 'excel', title: 'Liste' },
+                    { extend: 'pdf', title: 'Liste' },
+
+
+                    {
+
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    .addClass('compact')
+                                    .css('font-size', 'inherit');
+                        }
+                    }
+                ]
+
+            });
+
+
+
+
+
+        });
+
+
+</script>
+
+
+}

@@ -1,0 +1,326 @@
+(Tuple.Create("", 836), Tuple.Create<System.Object, System.Int32>(Model.KurumAdi
+            
+            #line default
+            #line hidden
+, 836), false)
+);
+
+WriteLiteral(">\r\n                            </div>\r\n                            <div");
+
+WriteLiteral(" class=\"col-md-10\"");
+
+WriteLiteral(">\r\n                                <br />\r\n                                <span");
+
+WriteLiteral(" style=\"font-size:60px;vertical-align:bottom;text-align: center;\"");
+
+WriteLiteral(" class=\"heading-primary\"");
+
+WriteLiteral(">");
+
+            
+            #line 18 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                                                                                          Write(Model.KurumAdi);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n                            </div>\r\n                        </div>\r\n    " +
+"                </div>\r\n                </div>\r\n\r\n                <div");
+
+WriteLiteral(" class=\"container\"");
+
+WriteLiteral(">\r\n                    <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                        <div");
+
+WriteLiteral(" class=\"col-md-12\"");
+
+WriteLiteral(">\r\n                            <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                                <div");
+
+WriteLiteral(" class=\"col-md-9\"");
+
+WriteLiteral(">\r\n                                    <div");
+
+WriteLiteral(" class=\"row\"");
+
+WriteLiteral(">\r\n                                        <div");
+
+WriteLiteral(" class=\"col-md-12\"");
+
+WriteLiteral(">\r\n                                            <div");
+
+WriteLiteral(" class=\"tabs tabs-tertiary tabs-center nav-tabs-justified\"");
+
+WriteLiteral(">\r\n                                                <ul");
+
+WriteLiteral(" class=\"nav nav-tabs\"");
+
+WriteLiteral(" >\r\n                                                    <li><a");
+
+WriteLiteral(" href=\"#haberler\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Haberler</a></li>\r\n");
+
+            
+            #line 34 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    
+            
+            #line default
+            #line hidden
+            
+            #line 34 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.KurumResim.Where(r => r.ResimTipi == 1).Count() >= 1)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li");
+
+WriteLiteral(" class=\"active\"");
+
+WriteLiteral("><a");
+
+WriteLiteral(" href=\"#slayt\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Tanıtım Slaytları</a></li>\r\n");
+
+            
+            #line 37 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 39 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    
+            
+            #line default
+            #line hidden
+            
+            #line 39 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.KurumResim.Where(r => r.ResimTipi == 4).Count() >= 1)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#aktiviteler\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Aktiviteler</a></li>\r\n");
+
+            
+            #line 42 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    ");
+
+            
+            #line 43 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.Aciklama != null && Model.Aciklama.Length > 10)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#aciklama\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Hakkında</a></li>\r\n");
+
+            
+            #line 46 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    ");
+
+            
+            #line 47 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.Video != null && Model.Video.Length > 20)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#video\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Tanıtım Videosu</a></li>\r\n");
+
+            
+            #line 50 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    ");
+
+            
+            #line 52 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.Harita != null && Model.Harita.Length > 20)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#harita\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Harita</a></li>\r\n");
+
+            
+            #line 55 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    ");
+
+            
+            #line 57 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.Panoroma != null && Model.Panoroma.Length > 10)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#panoroma\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Panoroma</a></li>\r\n");
+
+            
+            #line 60 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    ");
+
+            
+            #line 61 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                     if (Model.D3Boyutlu != null && Model.D3Boyutlu.Length > 10)
+                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                        <li><a");
+
+WriteLiteral(" href=\"#3d\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">3D Tanıtım</a></li>\r\n");
+
+            
+            #line 64 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                    }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                    <li><a");
+
+WriteLiteral(" href=\"#Resimler\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Resimler</a></li>\r\n                                                    <li><a");
+
+WriteLiteral(" href=\"#Detaylar\"");
+
+WriteLiteral(" data-toggle=\"tab\"");
+
+WriteLiteral(" style=\"color:blue;\"");
+
+WriteLiteral(">Detaylar</a></li>\r\n                                                </ul>\r\n      " +
+"                                          <div");
+
+WriteLiteral(" class=\"tab-content\"");
+
+WriteLiteral(">\r\n                                                    <div");
+
+WriteLiteral(" class=\"tab-pane active\"");
+
+WriteLiteral(" id=\"haberler\"");
+
+WriteLiteral(">\r\n                                                        <div");
+
+WriteLiteral(" class=\"thumb-gallery\"");
+
+WriteLiteral(">\r\n                                                            <div");
+
+WriteLiteral(" class=\"thumb-gallery\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 72 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                                
+            
+            #line default
+            #line hidden
+            
+            #line 72 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTedarikcisi.cshtml"
+                                                                  
+
+        

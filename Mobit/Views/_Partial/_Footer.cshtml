@@ -1,0 +1,274 @@
+﻿@using Mobit.Data.Model
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h4 style="text-align:center;vertical-align:middle;" >İLETİŞİM BİLGİLERİ</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <span style="font-size:12px;color:#ffffff;"><a href="mailto:basinbulteni@temizliksektoru.istanbul">basinbulteni@temizliksektoru.istanbul</a><span style="font-size:10px;color:beige;"> (HABER YAYIN TALEPLERİNİZ İÇİN)</span></span>
+                </div>
+                <div class="col-md-12">
+                    <span style="font-size:12px;color:#ffffff;"><a href="mailto:reklam@temizliksektoru.istanbul">reklam@temizliksektoru.istanbul</a><span style="font-size:10px;color:beige;"> (WEB TANITIM VE REKLAM TALEPLERİNİZ İÇİN)</span></span>
+                </div>
+                <div class="col-md-12">
+                    <span style="font-size:12px;color:#ffffff;"><a href="mailto:editor@temizliksektoru.istanbul">editor@temizliksektoru.istanbul</a><span style="font-size:10px;color:beige;"> (TÜM YAZI VE ROPÖRTAJ TALEPLERİNİZ İÇİN)</span></span>
+                </div>
+                <div class="col-md-12">
+                    <span style="font-size:12px;color:#ffffff;"><a href="mailto:sikayet@temizliksektoru.istanbul">sikayet@temizliksektoru.istanbul</a><span style="font-size:10px;color:beige;"> (ŞİKAYET VE DİLEKLERİNİZ İÇİN)</span></span>
+                </div>
+            </div>
+       </div>
+
+       <div class="col-md-5">
+            <h4 style="text-align:center;vertical-align:middle;" >SOSYAL MEDYA</h4>
+            <hr />
+                   <ul class="social-icons" style="text-align:center;vertical-align:middle;">
+                       <li><a href="@ViewBag.Facebook" target="_blank" title="Facebook" style="background: #3b5a9a;:#ffffff;"><i class="fa fa-facebook"></i></a></li>
+                       <li><a href="@ViewBag.Twitter" target="_blank" title="Twitter" style="background: #1aa9e1;"><i class="fa fa-twitter"></i></a></li>
+                       <li><a href="@ViewBag.Linkedin" target="_blank" title="Linkedin" style="background: #0073b2;"><i class="fa fa-linkedin"></i></a></li>
+                       <li><a href="@ViewBag.GooglePlus" target="_blank" title="GooglePlus" style="background: #dd4b39;"><i class="fa fa-google-plus"></i></a></li>
+                       <li><a href="@ViewBag.Diger" target="_blank" title="Instagram" style="background: #7c4a3a;"><i class="fa fa-instagram"></i></a></li>
+                   </ul> 
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" style="font-size:30px;font-weight:bold;color:#ffffff;text-align:center;vertical-align:middle;">
+                <span >(0507) 910 41 40</span>
+            </div>
+            <div class="col-md-6" style="font-size:30px;font-weight:bold;color:#ffffff;text-align:center;vertical-align:middle;">
+                <span >(0850) 532 65 85</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 center">
+                <a href="http://www.powertechsoft.com/" target="_blank">
+                    <p style="font-size:12px;color:#ffffff;">By Dizayn & Developer : Power Tech Soft</p>
+                </a>
+                <br />Sitemiz Rapit SSL Sertifikalıdır.
+            </div>
+            <div class="col-md-4 center">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="largeModal" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopup.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="largeModal1" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupRoportajlar.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*SPONSOR 1*@
+<div class="modal fade" id="Sponsor1" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor1.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*SPONSOR 2*@
+<div class="modal fade" id="Sponsor2" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor2.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*SPONSOR 3*@
+<div class="modal fade" id="Sponsor3" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor3.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*SPONSOR 4*@
+<div class="modal fade" id="Sponsor4" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor4.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*SPONSOR 5*@
+<div class="modal fade" id="Sponsor5" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor5.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*SPONSOR 6*@
+<div class="modal fade" id="Sponsor6" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupSponsor6.cshtml", ViewData["HaberlerPopup"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Ayın En İyi Temizlik Şirketi*@
+<div class="modal fade" id="HaberPopupAyinEniyiTemizlikSirketi" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiTemizlikSirketi.cshtml", ViewData["HaberPopupAyinEniyiTemizlikSirketi"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Ayın En İyi Tedarikçisi*@
+<div class="modal fade" id="HaberPopupAyinEniyiTedarikcisi" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiTedarikcisi.cshtml", ViewData["HaberPopupAyinEniyiTedarikcisi"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*Ayın En İyi Halı Yıkamacısı*@
+<div class="modal fade" id="HaberPopupAyinEniyiUrunu" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiUrunu.cshtml", ViewData["HaberPopupAyinEniyiUrunu"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*_HaberPopupAyinEniyiUreticiFirmasi*@
+<div class="modal fade" id="HaberPopupAyinEniyiUreticiFirmasi" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiUreticiFirmasi.cshtml", ViewData["HaberPopupAyinEniyiUreticiFirmasi"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Ayın En İyi Makina Üreticisi *@
+<div class="modal fade" id="HaberPopupAyinEniyiMakinaUreticisi" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiMakinaUreticisi.cshtml", ViewData["HaberPopupAyinEniyiMakinaUreticisi"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*En İyi Kuru Temizlemecisi*@
+<div class="modal fade" id="HaberPopupAyinEniyiKuruTemizlemecisi" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_HaberPopupAyinEniyiKuruTemizlemecisi.cshtml", ViewData["HaberPopupAyinEniyiKuruTemizlemecisi"])
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*En İyi Tedarikçiler*@
+<div class="modal fade" id="PopupEniyiTedarikciler" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_PopupEniyiTedarikciler.cshtml", ViewData["_PopupEniyiTedarikciler"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*En İyi Temizlik Şirketleri*@
+<div class="modal fade" id="PopupEniyiTemizlikSirketleri" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_PopupEniyiTemizlikSirketleri.cshtml", ViewData["PopupEniyiTemizlikSirketleri"])
+            </div>
+        </div>
+    </div>
+</div>
+
+@*En İyi Ürünler*@
+<div class="modal fade" id="PopupEniyiUrunler" role="dialog" >
+    <div class="modal-dialog modal-lg" style="width:1000px;">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                @Html.Partial("/Views/_Partial/_PopupEniyiUrunler.cshtml", ViewData["PopupEniyiUrunler"])
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

@@ -1,0 +1,1154 @@
+ibutes" />
+        <xs:attribute ref="cg:TypeAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TConstraint">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:element name="Principal" type="edm:TReferentialConstraintRoleElement" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Dependent" type="edm:TReferentialConstraintRoleElement" minOccurs="1" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TReferentialConstraintRoleElement">
+        <xs:sequence>
+            <xs:element name="PropertyRef" type="edm:TPropertyRef" minOccurs="1" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Role" type="edm:TSimpleIdentifier" use="required" />
+    </xs:complexType>
+    <xs:complexType name="TNavigationProperty">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Relationship" type="edm:TQualifiedName" use="required" />
+        <xs:attribute name="ToRole" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="FromRole" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute ref="cg:GetterAccess" use="optional" />
+        <xs:attribute ref="cg:SetterAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEntityType">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:element name="Key" type="edm:TEntityKeyElement" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Property" type="edm:TEntityProperty" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="NavigationProperty" type="edm:TNavigationProperty" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TDerivableTypeAttributes" />
+        <xs:attribute ref="cg:TypeAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+
+
+    <xs:complexType name="TFunction">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Parameter" type="edm:TFunctionParameter" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="DefiningExpression" type="edm:TCommandText" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReturnType" type="edm:TFunctionReturnType" minOccurs="0" maxOccurs="1" />
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="ReturnType" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionParameter">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TCollectionType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="TypeRef" type="edm:TTypeRef" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="ElementType" type="edm:TUnwrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TTypeRef">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TUnwrappedFunctionType" use="required" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TReferenceType">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TUnwrappedFunctionType" use="required" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TRowType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Property" type="edm:TProperty" minOccurs="0" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:choice>
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TProperty">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionReturnType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+
+
+    <xs:complexType name="TEntityKeyElement">
+        <xs:sequence>
+            <xs:element name="PropertyRef" type="edm:TPropertyRef" minOccurs="1" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TPropertyRef">
+        <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+    </xs:complexType>
+    <xs:group name="GEmptyElementExtensibility">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:group>
+    <!-- 
+        base types  
+    -->
+    <xs:complexType name="TAssociationEnd">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="edm:TOperations" minOccurs="0" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TQualifiedName" use="required" />
+        <xs:attribute name="Role" type="edm:TSimpleIdentifier" use="optional" />
+        <xs:attribute name="Multiplicity" type="edm:TMultiplicity" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:group name="TOperations">
+        <xs:choice>
+            <xs:element name="OnDelete" type="edm:TOnAction" maxOccurs="1" minOccurs="0" />
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="TOnAction">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Action" type="edm:TAction" use="required" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEntityProperty">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TCommonPropertyAttributes" />
+        <xs:attribute ref="annotation:StoreGeneratedPattern" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TComplexTypeProperty">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TCommonPropertyAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionImportParameter">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TFunctionImportParameterAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+
+    <xs:attributeGroup name="TFacetAttributes">
+        <xs:attribute name="Nullable" type="xs:boolean" use="optional" />
+        <xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+        <xs:attribute name="MaxLength" type="edm:TMaxLengthFacet" use="optional" />
+        <xs:attribute name="FixedLength" type="edm:TIsFixedLengthFacet" use="optional" />
+        <xs:attribute name="Precision" type="edm:TPrecisionFacet" use="optional" />
+        <xs:attribute name="Scale" type="edm:TScaleFacet" use="optional" />
+        <xs:attribute name="Unicode" type="edm:TIsUnicodeFacet" use="optional" />
+        <xs:attribute name="Collation" type="edm:TCollationFacet" use="optional" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="TCommonPropertyAttributes">
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TPropertyType" use="required" />
+        <xs:attribute name="Nullable" type="xs:boolean" default="true" use="optional" />
+        <xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+        <!-- Start Facets -->
+        <xs:attribute name="MaxLength" type="edm:TMaxLengthFacet" use="optional" />
+        <xs:attribute name="FixedLength" type="edm:TIsFixedLengthFacet" use="optional" />
+        <xs:attribute name="Precision" type="edm:TPrecisionFacet" use="optional" />
+        <xs:attribute name="Scale" type="edm:TScaleFacet" use="optional" />
+        <xs:attribute name="Unicode" type="edm:TIsUnicodeFacet" use="optional" />
+        <xs:attribute name="Collation" type="edm:TCollationFacet" use="optional" />
+        <!--End Facets -->
+        <xs:attribute name="ConcurrencyMode" type="edm:TConcurrencyMode" use="optional" />
+        <xs:attribute ref="cg:SetterAccess" use="optional" />
+        <xs:attribute ref="cg:GetterAccess" use="optional" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="TFunctionImportParameterAttributes">
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TPropertyType" use="required" />
+        <xs:attribute name="Mode" type="edm:TParameterMode" use="optional" />
+        <xs:attribute name="MaxLength" type="edm:TMaxLengthFacet" use="optional" />
+        <xs:attribute name="Precision" type="edm:TPrecisionFacet" use="optional" />
+        <xs:attribute name="Scale" type="edm:TScaleFacet" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="TFunctionImportAttributes">
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="ReturnType" type="edm:TFunctionType" use="optional" />
+        <xs:attribute name="EntitySet" type="edm:TSimpleIdentifier" use="optional" />
+        <xs:attribute ref="cg:MethodAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="TTypeAttributes">
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="TDerivableTypeAttributes">
+        <xs:attributeGroup ref="edm:TTypeAttributes" />
+        <xs:attribute name="BaseType" type="edm:TQualifiedName" use="optional" />
+        <xs:attribute name="Abstract" type="xs:boolean" use="optional" default="false" />
+    </xs:attributeGroup>
+    <xs:attributeGroup name="TEntitySetAttributes">
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="EntityType" type="edm:TQualifiedName" use="required" />
+        <xs:attribute ref="cg:GetterAccess" use="optional" />
+    </xs:attributeGroup>
+    <xs:element name="EntityContainer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="FunctionImport">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="Parameter" type="edm:TFunctionImportParameter" minOccurs="0" maxOccurs="unbounded" />
+                                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+                            </xs:sequence>
+                            <xs:attributeGroup ref="edm:TFunctionImportAttributes" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="EntitySet">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+                            </xs:sequence>
+                            <xs:attributeGroup ref="edm:TEntitySetAttributes" />
+                            <xs:anyAttribute processContents="lax" namespace="##other" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AssociationSet">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+                                <xs:element name="End" minOccurs="0" maxOccurs="2">
+                                    <!-- 
+                       1. The number of Ends has to match with ones defined in AssociationType 
+                       2. Value for attribute Name should match the defined ones and EntitySet should be of the 
+                          defined Entity Type in AssociationType 
+                    -->
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+                                        </xs:sequence>
+                                        <xs:attribute name="Role" type="edm:TSimpleIdentifier" use="optional" />
+                                        <xs:attribute name="EntitySet" type="edm:TSimpleIdentifier" use="required" />
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+                            </xs:sequence>
+                            <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+                            <xs:attribute name="Association" type="edm:TQualifiedName" use="required" />
+                            <xs:anyAttribute namespace="##other" processContents="lax" />
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+            <xs:attribute name="Extends" type="edm:TSimpleIdentifier" use="optional" />
+            <xs:attribute ref="cg:TypeAccess" use="optional" />
+            <xs:attribute ref="annotation:LazyLoadingEnabled" use="optional" />
+            <xs:anyAttribute namespace="##other" processContents="lax" />
+        </xs:complexType>
+    </xs:element>
+    <!-- 
+    general  (more or less) purpose simple types 
+    -->
+    <xs:simpleType name="TParameterMode">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="In" />
+            <xs:enumeration value="Out" />
+            <xs:enumeration value="InOut" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TNamespaceName">
+        <xs:restriction base="edm:TQualifiedName">
+            <xs:maxLength value="512" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TQualifiedName">
+        <xs:restriction base="xs:string">
+            <!-- The below pattern represents the allowed identifiers in ECMA specification plus the '.' for namespace qualification  -->
+            <xs:pattern value="[\p{L}\p{Nl}][\p{L}\p{Nl}\p{Nd}\p{Mn}\p{Mc}\p{Pc}\p{Cf}]{0,}(\.[\p{L}\p{Nl}][\p{L}\p{Nl}\p{Nd}\p{Mn}\p{Mc}\p{Pc}\p{Cf}]{0,}){0,}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TSimpleIdentifier">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="480" />
+            <!-- The below pattern represents the allowed identifiers in ECMA specification -->
+            <xs:pattern value="[\p{L}\p{Nl}][\p{L}\p{Nl}\p{Nd}\p{Mn}\p{Mc}\p{Pc}\p{Cf}]{0,}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TPropertyType">
+        <xs:union memberTypes="edm:EDMSimpleType edm:TQualifiedName  ">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <!-- The below pattern represents the allowed identifiers in ECMA specification plus the '.' for namespace qualification  -->
+                    <xs:pattern value="[\p{L}\p{Nl}][\p{L}\p{Nl}\p{Nd}\p{Mn}\p{Mc}\p{Pc}\p{Cf}]{0,}(\.[\p{L}\p{Nl}][\p{L}\p{Nl}\p{Nd}\p{Mn}\p{Mc}\p{Pc}\p{Cf}]{0,}){0,}" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="TCommandText">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="preserve" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TFunctionType">
+        <xs:union memberTypes="edm:TQualifiedName    ">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:pattern value="Collection\([^ \t]{1,}(\.[^ \t]{1,}){0,}\)" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="TWrappedFunctionType">
+        <xs:union memberTypes="edm:TQualifiedName    ">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:pattern value="(Collection|Ref)\([^ \t]{1,}(\.[^ \t]{1,}){0,}\)" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="TUnwrappedFunctionType">
+        <xs:union memberTypes="edm:TQualifiedName    ">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:pattern value="[^ \t]{1,}(\.[^ \t]{1,}){0,}" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+    <xs:simpleType name="TAction">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Cascade" />
+            <xs:enumeration value="None" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TMultiplicity">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="0..1" />
+            <xs:enumeration value="1" />
+            <xs:enumeration value="*" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TConcurrencyMode">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="None" />
+            <xs:enumeration value="Fixed" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>    pÏ  Ôªø<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:edm="http://schemas.microsoft.com/ado/2009/11/edm" targetNamespace="http://schemas.microsoft.com/ado/2009/11/edm">
+    <xs:annotation>
+        <xs:documentation xml:lang="en">
+            Common Data Model Schema Definition Language.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:import namespace="http://schemas.microsoft.com/ado/2006/04/codegeneration" schemaLocation="System.Data.Resources.CodeGenerationSchema.xsd" />
+    <xs:import namespace="http://schemas.microsoft.com/ado/2009/02/edm/annotation" schemaLocation="System.Data.Resources.AnnotationSchema.xsd" />
+    <xs:element name="Schema" type="edm:TSchema" />
+    <xs:complexType name="TSchema">
+        <xs:sequence>
+            <xs:group ref="edm:GSchemaBodyElements" minOccurs="0" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Namespace" type="edm:TNamespaceName" use="optional" />
+        <xs:attribute name="Alias" type="edm:TSimpleIdentifier" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:group name="GSchemaBodyElements">
+        <xs:choice>
+            <xs:element name="Using" type="edm:TUsing" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Association" type="edm:TAssociation" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ComplexType" type="edm:TComplexType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="EntityType" type="edm:TEntityType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="EnumType" type="edm:TEnumType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="ValueTerm" type="edm:TValueTerm" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Function" type="edm:TFunction" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element name="Annotations" type="edm:TAnnotations" minOccurs="0" maxOccurs="unbounded" />
+            <xs:element ref="edm:EntityContainer" minOccurs="1" maxOccurs="1" />
+        </xs:choice>
+    </xs:group>
+    <!-- EDM SimpleType instances for use by EDM Instance documents-->
+    <xs:simpleType name="EDMSimpleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Binary" />
+            <xs:enumeration value="Boolean" />
+            <xs:enumeration value="Byte" />
+            <xs:enumeration value="DateTime" />
+            <xs:enumeration value="DateTimeOffset" />
+            <xs:enumeration value="Time" />
+            <xs:enumeration value="Decimal" />
+            <xs:enumeration value="Double" />
+            <xs:enumeration value="Single" />
+            <xs:enumeration value="Geography" />
+            <xs:enumeration value="GeographyPoint" />
+            <xs:enumeration value="GeographyLineString" />
+            <xs:enumeration value="GeographyPolygon" />
+            <xs:enumeration value="GeographyMultiPoint" />
+            <xs:enumeration value="GeographyMultiLineString" />
+            <xs:enumeration value="GeographyMultiPolygon" />
+            <xs:enumeration value="GeographyCollection" />
+            <xs:enumeration value="Geometry" />
+            <xs:enumeration value="GeometryPoint" />
+            <xs:enumeration value="GeometryLineString" />
+            <xs:enumeration value="GeometryPolygon" />
+            <xs:enumeration value="GeometryMultiPoint" />
+            <xs:enumeration value="GeometryMultiLineString" />
+            <xs:enumeration value="GeometryMultiPolygon" />
+            <xs:enumeration value="GeometryCollection" />
+            <xs:enumeration value="Guid" />
+            <xs:enumeration value="Int16" />
+            <xs:enumeration value="Int32" />
+            <xs:enumeration value="Int64" />
+            <xs:enumeration value="String" />
+            <xs:enumeration value="SByte" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TMax">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Max" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TVariable">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Variable" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- Facets for Primitive types -->
+    <xs:simpleType name="TMaxLengthFacet">
+        <xs:union memberTypes="edm:TMax xs:nonNegativeInteger  " />
+    </xs:simpleType>
+    <xs:simpleType name="TIsFixedLengthFacet">
+        <xs:restriction base="xs:boolean" />
+    </xs:simpleType>
+    <xs:simpleType name="TPrecisionFacet">
+        <xs:restriction base="xs:nonNegativeInteger" />
+    </xs:simpleType>
+    <xs:simpleType name="TScaleFacet">
+        <xs:restriction base="xs:nonNegativeInteger" />
+    </xs:simpleType>
+    <xs:simpleType name="TIsUnicodeFacet">
+        <xs:restriction base="xs:boolean" />
+    </xs:simpleType>
+    <xs:simpleType name="TCollationFacet">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:simpleType name="TSridFacet">
+        <xs:union memberTypes="edm:TVariable xs:nonNegativeInteger  " />
+    </xs:simpleType>
+    <!--
+        types at all levels
+    -->
+    <xs:complexType name="TDocumentation">
+        <xs:annotation>
+            <xs:documentation>
+                The Documentation element is used to provide documentation of comments on the contents of the XML file.
+                It is valid
+                under Schema, Type, Index and Relationship elements.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Summary" type="edm:TText" minOccurs="0" maxOccurs="1" />
+            <xs:element name="LongDescription" type="edm:TText" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:anyAttribute processContents="lax" namespace="##other" />
+    </xs:complexType>
+    <xs:complexType name="TText" mixed="true">
+        <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:anyAttribute processContents="lax" namespace="##other" />
+    </xs:complexType>
+    <xs:complexType name="TXmlOrText" mixed="true">
+        <xs:annotation>
+            <xs:documentation>
+                This type allows pretty much any content
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:anyAttribute processContents="skip" namespace="##any" />
+    </xs:complexType>
+    <!-- 
+        types of the top level elements 
+    -->
+    <xs:complexType name="TUsing">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Namespace" type="edm:TNamespaceName" use="required" />
+        <xs:attribute name="Alias" type="edm:TSimpleIdentifier" use="required" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TAssociation">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:element name="End" type="edm:TAssociationEnd" minOccurs="2" maxOccurs="2" />
+            <xs:element name="ReferentialConstraint" type="edm:TConstraint" minOccurs="0" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TComplexType">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Property" type="edm:TComplexTypeProperty" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TTypeAttributes" />
+        <xs:attribute ref="cg:TypeAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TConstraint">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:element name="Principal" type="edm:TReferentialConstraintRoleElement" minOccurs="1" maxOccurs="1" />
+            <xs:element name="Dependent" type="edm:TReferentialConstraintRoleElement" minOccurs="1" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TReferentialConstraintRoleElement">
+        <xs:sequence>
+            <xs:element name="PropertyRef" type="edm:TPropertyRef" minOccurs="1" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Role" type="edm:TSimpleIdentifier" use="required" />
+    </xs:complexType>
+    <xs:complexType name="TNavigationProperty">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Relationship" type="edm:TQualifiedName" use="required" />
+        <xs:attribute name="ToRole" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="FromRole" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="ContainsTarget" type="xs:boolean" use="optional" />
+        <xs:attribute ref="cg:GetterAccess" use="optional" />
+        <xs:attribute ref="cg:SetterAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEntityType">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:element name="Key" type="edm:TEntityKeyElement" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Property" type="edm:TEntityProperty" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="NavigationProperty" type="edm:TNavigationProperty" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TDerivableTypeAttributes" />
+        <xs:attribute name="OpenType" type="xs:boolean" use="optional" default="false" />
+        <xs:attribute ref="cg:TypeAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEnumTypeMember">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Value" type="xs:long" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEnumType">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Member" type="edm:TEnumTypeMember" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attributeGroup ref="edm:TTypeAttributes" />
+        <xs:attribute name="IsFlags" type="xs:boolean" use="optional" />
+        <xs:attribute name="UnderlyingType" type="edm:TPropertyType" use="optional" />
+        <xs:attribute ref="cg:TypeAccess" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunction">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="Parameter" type="edm:TFunctionParameter" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="DefiningExpression" type="edm:TCommandText" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReturnType" type="edm:TFunctionReturnType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="ReturnType" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionParameter">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:choice minOccurs="0" maxOccurs="1">
+                    <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+                </xs:choice>
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TCollectionType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="TypeRef" type="edm:TTypeRef" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="ElementType" type="edm:TUnwrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TTypeRef">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TUnwrappedFunctionType" use="required" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TReferenceType">
+        <xs:sequence>
+            <xs:group ref="edm:GEmptyElementExtensibility" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TUnwrappedFunctionType" use="required" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TRowType">
+        <xs:choice minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Property" type="edm:TRowProperty" minOccurs="0" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:choice>
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TRowProperty">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+        <xs:attribute name="Type" type="edm:TWrappedFunctionType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionReturnType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="1">
+                <xs:element name="CollectionType" type="edm:TCollectionType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="ReferenceType" type="edm:TReferenceType" minOccurs="0" maxOccurs="1" />
+                <xs:element name="RowType" type="edm:TRowType" minOccurs="0" maxOccurs="1" />
+            </xs:choice>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TFunctionImportParameterAndReturnType" use="optional" />
+        <xs:attributeGroup ref="edm:TFacetAttributes" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TFunctionImportReturnType">
+        <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Type" type="edm:TFunctionImportParameterAndReturnType" use="optional" />
+        <!-- EntitySet and EntitySetPath are mutually exclusive. -->
+        <xs:attribute name="EntitySet" type="edm:TSimpleIdentifier" use="optional" />
+        <xs:attribute name="EntitySetPath" type="edm:TPath" use="optional" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TEntityKeyElement">
+        <xs:sequence>
+            <xs:element name="PropertyRef" type="edm:TPropertyRef" minOccurs="1" maxOccurs="unbounded" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TPropertyRef">
+        <xs:sequence>
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="Name" type="edm:TSimpleIdentifier" use="required" />
+    </xs:complexType>
+    <xs:group name="GEmptyElementExtensibility">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:group>
+
+    <!--
+        Vocabulary annotations.
+  -->
+    <xs:complexType name="TAnnotations">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="ValueAnnotation" type="edm:TValueAnnotation" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="TypeAnnotation" type="edm:TTypeAnnotation" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Target" type="edm:TPath" use="required" />
+        <xs:attribute name="Qualifier" type="xs:string" use="optional" />
+    </xs:complexType>
+    <xs:complexType name="TValueAnnotation">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:group ref="edm:GExpression" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="Term" type="edm:TQualifiedName" use="required" />
+        <xs:attribute name="Qualifier" type="xs:string" use="optional" />
+        <xs:attributeGroup ref="edm:GInlineExpressions" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:complexType name="TTypeAnnotation">
+        <xs:sequence>
+            <xs:element name="Documentation" type="edm:TDocumentation" minOccurs="0" maxOccurs="1" />
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="PropertyValue" type="edm:TPropertyValue" minOccurs="0" maxOccurs="unbounded" />
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="Term" type="edm:TQualifiedName" use="required" />
+        <xs:attribute name="Qualifier" type="xs:string" use="optional" />
+        <xs:attributeGroup ref="edm:GInlineExpressions" />
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+    </xs:complexType>
+    <xs:group name="GExpression">
+        <xs:sequence>
+            <!-- Logically this group means one of the expressions plus an arbitrary number of CSDL annotations,
+           syntactically we have to make the inner sequence unbounded to allow elements in any order. -->
+            <xs:sequence maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:element name="String" type="edm:TStringConstantExpression" minOccurs="0" />
+                    <xs:element name="Binary" type="edm:TBinaryConstantExpression" minOccurs="0" />
+                    <xs:element name="Int" type="edm:TIntConstantExpression" minOccurs="0" />
+                    <xs:element name="Float" type="edm:TFloatConstantExpression" minOccurs="0" />
+                    <xs:element name="Guid" type="edm:TGuidConstantExpression" minOccurs="0" />
+                    <xs:element name="Decimal" type="edm:TDecimalConstantExpression" minOccurs="0" />
+                    <xs:element name="Bool" type="edm:TBoolConstantExpression" minOccurs="0" />
+                    <xs:element name="Time" type="edm:TTimeConstantExpression" minOccurs="0" />
+                    <xs:element name="DateTime" type="edm:TDateTimeConstantExpression" minOccurs="0" />
+                    <xs:element name="DateTimeOffset" type="edm:TDateTimeOffsetConstantExpression" minOccurs="0" />
+                    <xs:element name="EnumMemberReference" type="edm:TEnumMemberReferenceExpression" minOccurs="0" />
+                    <xs:element name="Null" type="edm:TNullExpression" minOccurs="0" />
+                    <xs:element name="Path" type="edm:TPathExpression" minOccurs="0" />
+                    <xs:element name="If" type="edm:TIfExpression" minOccurs="0" />
+                    <xs:element name="Record" type="edm:TRecordExpression" minOccurs="0" />
+                    <xs:element name="Collection" type="edm:TCollectionExpression" minOccurs="0" />
+                    <xs:element name="AssertType" type="edm:TAssertTypeExpression" minOccurs="0" />
+                    <xs:element name="IsType" type="edm:TIsTypeExpression" minOccurs="0" />
+                    <xs:element name="FunctionReference" type="edm:TFunctionReferenceExpression" minOccurs="0" />
+                    <xs:element name="EntitySetReference" type="edm:TEntitySetReferenceExpression" minOccurs="0" />
+                    <xs:element name="ParameterReference" type="edm:TParameterReferenceExpression" minOccurs="0" />
+                    <xs:element name="Apply" type="edm:TApplyExpression" minOccurs="0" />
+                    <xs:element name="PropertyReference" type="edm:TPropertyReferenceExpression" minOccurs="0" />
+                    <xs:element name="ValueTermReference" type="edm:TValueTermReferenceExpression" minOccurs="0" />
+                    <xs:element name="LabeledElement" type="edm:TLabeledElement" minOccurs="0" />
+                    <xs:element name="LabeledElementReference" type="edm:TLabeledElementReferenceExpression" minOccurs="0" />
+                </xs:choice>
+                <xs:any namespace="##other" processContents="lax" minOccurs="0" />
+            </xs:sequence>
+        </xs:sequence>
+    </xs:group>
+    <xs:attributeGroup name="GInlineExpressions">
+        <xs:attribute name="String" type="xs:string" use="optional" />
+        <xs:attribute name="Binary" type="xs:hexBinary" use="optional" />
+        <xs:attribute name="Int" type="xs:integer" use="optional" />
+        <xs:attribute name="Float" type="xs:double" use="optional" />
+        <xs:attribute name="Guid" type="edm:TGuidLiteral" use="optional" />
+        <xs:attribute name="Decimal" type="xs:decimal" use="optional" />
+        <xs:attribute name="Bool" type="xs:boolean" use="optional" />
+        <xs:attribute name="Time" type="xs:time" use="optional" />
+        <xs:attribute name="DateTime" type="xs:dateTime" use="optional" />
+        <xs:attribute name="DateTimeOffset" type="xs:dateTime" use="optional" />
+        <xs:attribute name="Path" type="edm:TPath" use="optional" />
+    </xs:attributeGroup>
+    <xs:complexType name="TStringConstantExpression">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:anyAttribute namespace="##other" processContents="lax" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="TBinaryConstantExpression">
+        <xs:simpleContent>
+            <xs:extension base="xs:hexBinary">
+                <xs:anyAttribute namespace="##other" processContents="lax" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="TIntConstantExpression">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:anyAttribute namespace="##other" processContents="lax" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="TFloatConst o¢  
+,"(t (x (z s! o  +(ñ s≠  
+z*ûrO poX  
+-rM poX  
+-	?(  +**  0 "     (Y  
+(û ç  
+¢(K  
+sZ  
+*  0 "     (Y  
+(ü ç  
+¢(K  
+sZ  
+*  0 A     (I  
+,(~ *r/  poX  
+-"(Y  
+(° ç  
+¢(K  
+sZ  
+**   0 /     (I  
+-%o< 
+
+rS p((  
+-rA	 p((  
+,**(  
+*æ-r  ps  
+z-r  ps  
+zo'  
+o'  
+((  
+*j-r  ps  
+zo'  
+o)  
+*æ-r  ps  
+z-r  ps  
+zo'  
+o'  
+(*  
+*.sÇ Ä~  *  0 â   E  sL  
+
+rﬂ poM  
+&(ù oM  
+r˚ poM  
+&o= 
++o> 
+oO  
+oM  
+r˚ poM  
+&o&  
+-⁄ﬁ
+,o"  
+‹rI	 poM  
+&o´  oM  
+&oO  
+o¨  *      / *Y 
+    0 {   F  -r  ps  
+z-r3 ps  
+zo -Ks& 
+
+o´  s? 
+o@ 
+oA 
+oB 
+o* 
+o+ 
+1o* 
+(á +o¨  ~  oÆ  *VrU	 pÄ  sâ ÄÄ  *(  
+*{Ç  *"}Ç  *(  
+*:(  
+(å *   0 ë   G  -r3 ps  
+z(ã (I  
+-(ã oÆ  *o≠  (I  
+,[o≥  ,So≥  (  +
+,Do  o'  
+(D 
+ru	 p((  
+,~  oÆ  *r}	 p((  
+,~y  oÆ  *.sç ÄÅ  *z~É  ,*ÄÉ  –  (U  
+(F 
+*(  
+*0 3   H  ~Ñ  (I 
+, rá	 p–:  (U  
+oØ  
+sJ 
+
+ÄÑ  ~Ñ  *~Ö  *ÄÖ  *V(ì r˜	 p~Ö  oK 
+*V(ì r5
+ p~Ö  oK 
+*V(ì re
+ p~Ö  oK 
+*V(ì r•
+ p~Ö  oK 
+*V(ì rÕ
+ p~Ö  oK 
+*V(ì r˝
+ p~Ö  oK 
+*V(ì r p~Ö  oK 
+*V(ì rU p~Ö  oK 
+*V(ì rm p~Ö  oK 
+*V(ì rô p~Ö  oK 
+*V(ì r√ p~Ö  oK 
+*V(ì rˇ p~Ö  oK 
+*n,	(L 
+(–  
+(V  
+*      ·  Œ Ôæ   ë   lSystem.Resources.ResourceReader, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089#System.Resources.RuntimeResourceSet          PADPADP6´˚† wt•g?Ü√¡'é…Ω··<[ΩpŒV?ŒÏ®@ÙBqµVHº˝·g±Ö¡h‚   é  ∑   s    )  6  Ω  A   Í      t   î  <B u n d l e D i r e c t o r y _ d o e s _ n o t _ e x i s t     .C d n F a l l B a c k S c r i p t S t r i n g    >D y n a m i c F o l d e r B u n d l e _ I n v a l i d P a t h d   &F i l e _ d o e s _ n o t _ e x i s t ◊   .I n v a l i d O p t i m i z a t i o n M o d e Ì   I n v a l i d P a t t e r n C  8I n v a l i d W i l d c a r d S e a r c h P a t t e r n Í  M i n i f y E r r o r *  *P a r a m e t e r _ N u l l O r E m p t y _  (P r o p e r t y _ N u l l O r E m p t y î  :T y p e _ d o e s n t _ i n h e r i t _ f r o m _ t y p e ”  RU r l M a p p i n g s _ o n l y _ a p p _ r e l a t i v e _ u r l _ a l l o w e d ¸  Directory does not exist.G<script>({0})||document.write('<script src="{1}"><\/script>');</script>qThe Path for DynamicFolderBundles cannot start with a '/' or '~' character and it cannot contain a '?' character.File does not exist.TInvalid OptimizationMode value, valid values are: Always, WhenEnabled, WhenDisabled.§Invalid pattern: '{0}'. Wildcards are only allowed in the last path segment, can contain only one leading or trailing wildcard, and cannot be used with {{version}}.>Pure wildcard search patterns '*' and '*.*' are not supported.3Minification failed. Returning unminified contents.3The string parameter '{0}' cannot be null or empty.=The value assigned to property '{0}' cannot be null or empty.'Type '{0}' does not inherit from '{1}'.OThe URL '{0}' is not valid. Only application relative URLs (~/url) are allowed.   >  Ôªø<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BundleConfig" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="include">
+    <xs:attribute name="path" type="xs:string" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="styleBundle">
+    <xs:sequence>
+      <xs:element name="include" type="include" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="path" type="xs:string" use="required" />
+    <xs:attribute name="cdnPath" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="scriptBundle">
+    <xs:sequence>
+      <xs:element name="include" type="include" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="path" type="xs:string" use="required" />
+    <xs:attribute name="cdnPath" type="xs:string" use="optional" />
+    <xs:attribute name="cdnFallbackExpression" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <xs:element name="bundles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element type="styleBundle" name="styleBundle" />
+        <xs:element type="scriptBundle" name="scriptBundle" />
+      </xs:choice>
+      <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+  BSJB         v4.0.30319     l   \B  #~  »B  h7  #Strings    0z  T  #US ÑÜ     #GUID   îÜ  @  #Blob         W¢	   ˙%3      î   B   ê   ∞  m     L     œ   H      r   ø      D                    
+       ˛˜   4 @˜ J kX
+ Çw
+ èw
+ Æõ
+ ¬õ
+ Œõ ﬂ Ê˜ ˜
+ nw ó˜ ˜
+ ¥w
+ ‚w ü ú} ∆ 7X
+ ≈w
+ Ûw ﬁ‘  5 Ã˜ ı˜
+ &w «™ Z‘ ï‘ " Ö˜ + M˜ \ S ˜ 	!¯  :!%! Ü$˜ 8'' Q'v  h'v  Ö'v  §'v  Ω'v  ÷'v  Ò'v  (v  %(¯  f(G( z(˜ ê(G( û(v  ∑(v 
+ ‘(w ˜(˜ )¸( K)8)˚ _)   n)¸( é)¸( µ)˜ À)¸( Ê)‘ Û)‘ *˜ *
+ +*õ ;*˜ B*˜ Z*˜ r*˜
+ üÉ* ¢*˜ ‹*–* Ó*˜
+ +É* a+X ˘+˜ ,, 1,˜ R,˜ V,˜
+ h,w ≥,˜
+ ◊,w3 -   G-(-
+ ö-w
+ ‘-w
+ I.w r.˜
+ ó.wS ‘.  ã-  
+ ¸.õ
+ /w )/ 1/ g/U/ ê/U/ ß/U/ –/˜ Í/v  0 +0U/ D0U/ ¿0˜ È0, 1™
+ 1w <1™ I1™ e1™
+ Æ1w ﬂ1 2 "2 (2 02 ?2v  )‘ ê‘ ˜‘ ™2‘ «2‘ „2˜ -4–* Q4˜ W4˜S n4  -   ƒ4´4 Õ4´4 Ÿ4´4 5´4 S5˜ n5´4 {5´4 Ô5Ÿ5 6Ÿ5 k6:6 ß6è6 æ68)             & 1      I 1   	   \ v    °   à 1     †   ó 1        § 1      µ 1      ¬     .   À 1   4   “ 1   Z   „ 1  & w   ˘ 1  ( |  1  * Ö   1  0 ì °   #1   0 ô   31  0 ú   B1  4 © Å Q1  ; ∫  ]1  @ ¡   n1  D     Ö1  D Œ  ¢   E ÷    ®1 % G ‹   ¿  ) I Ê   ‘  - J Í  Ú1  K  É  ˝   O ¯  	  p Q     p Q    p Q  *  p Q   71  R 
+   E1  Z    P1 à \ !   d1  ` -  q1 5 b 5  Ç1  f 5Å ó1  j >   °1 5 j AÄ ≠1  p AÅ ª1  s EÅ ¬1  u N   1 ( w W  ◊1 ( w Y°   „1   w [  Ú1  w \°   1   x f  1  x g°   "1   z j  11  z k  F1 ( { pÄ Z1  ~ ~  h1  ~ Ç  |1   á  Ö1  Å ãÅ ñ1  É ë   Æƒ Ñ íÄ Ê1  Ü ¢ v+   Ü £ Ã1   á • Ã1   à ß (3   ä © ë3   å ´ Ã1   é Æ v+   è Ø Î>  Z  Å{ 3 ≈ê  {  "{  ©*5
+3 ]÷ ! ~ﬂ  ûË  ⁄ ˛ *$ ©*Ë  "{  aàQÄé{  °é ™ì ≥{  πò ¿ù Àà Î§ ≈
+{  ﬁ
+{  {  ˛á ¨ê ºá Àö ⁄¢ Ê¢ ˜¶ ªﬂ  p5 áà {  ,s ˇò { QÄl{ QÄ|{  TY rY ©* o0^ \â e ªﬂ  Ü ß{  ∞{  YŸ1 à ‚{  ˇ Ù Å ãà †à Ë à q{  ≈
+{  ﬁ
+{  ás ‘< L{  gá ¥à {  z∏ ‹› ,Ì 9Ì MÌ cı gá Î{  E ‡$ Ì Qﬂ  n {  êà ∑à ‹ Î>  j{  /{  N≤ kà 4` Ë ÷òÓﬁVÄˆáVÄ˝áVÄ	á {  Ç ü{  √ÓﬁVÄ/≤VÄ5≤VÄ9≤VÄ@≤VÄG≤SÄO{ QÄiMSÄp{  ªﬂ  ∆{  ªﬂ  ∆{  ≈ì3 ≈( ‰{  ≈-  {  + à N≤3 ≈í æ { 3 ≈≠3 ≈Ω ‚{  ‚ à !¬ F!« â+Ì ¥%{  ˚2à 1&{  ;3¢ R$ §3 ;3N …&ç  5ñ 05{ –     ÜˇF   !    ÜˇS  !    Ü^  !    Ü"c  *!    Ü2i  2!    ÜJm  ;!    Übr  D!    Ü qi  ‡!    Åˇî  Ë!    ÊŒò  ""    Ê’† 
+ B"    Ê·¶  |"    ëS*( à"    ÜˇÆ  û"    ÜÈi  ¶"    ÜÒm  Ø"    Ü˘i  ∑"    Üm        ∆C¥        ∆K∫        ∆U¡        ∆YÀ  ¿"    ÊK∫  "    ÊU¡  ,#    ÊYÀ  ∏#    Üˇî  #    ë ñ*/
+ ¿#    ÜˇŸ   œ#    Éã„ ! ‡#    É∞Ò ! 	$    É≈˚ ! $    É‰
+" #$    ÉÒ" ,$    É# =$    É# W$    É?+$ w$    ÉW/$ à$    ñ o4% Ù$    Å {;& P&    Å ùJ' Ã'    Ü ¿X( @(    É œ`* ã(    É Ìe+ ◊#    ë ,+6, π(    ëS*(.  (    Ü˘i . “(    Üm . €(    Ü6+/ „(    ÜH// Ï(    Üˇm 0 ¸(    Ü Z`1 9)    Ñˇî 2 `)    Üˇ≠2 ı)    Üˇ∑5  *    Üˇm 7 *    ÜˇÆ 8 *    Üﬂi : *    ÑËm : :*    ÜÒi ; B*    Ü˝m ; K*    ∆			i < S*    ∆	#	m < \*    Üb¿= d*    É=	 = *    ∆	G	–= ï*    ∆	S	÷= §*    ∆	_	›> ∫*    ∆	k	„> …*    ∆	w	+? —*    ∆	õ	/? ‡*    Üø	i @ Ë*    Ü÷	m @ Ò*    ÉÌ	ÍA ¸*    ∆˚	ÚA h+    ∆q˛B +    ∆
+
+E h,    ∆!
+F ê,    ∆!
+G ∑,    ∆)
+%I ƒ,    ∆)
+,K  -    ì :
+4N `-    É Q
+:O 0.    É `
+P d.    É r
+AQ ¶.    ∆
+IS ».    ∆ã
+T /    ∆ó
+PU P/    É £
+î W ‘/    ë ∫
+YW ê0    Üˇî Z +1    É™Z 31    ÉØZ <1    Üµ[ D1    Ü1æ[ L1    Ü@æ[ T1    ÜT√[ \1    Üu»[ e1    ÉñŒ\ m1    É©Ÿ\ u1    Éã„ \ ã1    ÉƒŸ \ î1    Ü–+] ú1    Ü€/] ®1    Ü Ê„^ ,2    ñ ÍÈ_ å2    ñ Ô` R4    ñ ˘a z4    Ü ?`b Ñ4    Ü ?ˇc ‡4    Ü Pe l5    Ü ]î f è5    Ü cî f ƒ5    Ü lf #6    Üsg 06    Ü ±g G6    ƒ‘g ^6    ·‚g f6    ·C0g n6    Üˇm g à6    Üi h ê6    Å˘m h ô6    ÜÍi °6    Åji ™6    Üˇzj ¿6    ÜNÅl »6    Å`„l —6    Üri m Ÿ6    Åàm m ‚6    Ê	û+n Â6    ì ≠Ün 7    ì ’åo l7    ÊQ
+íp µ7    Åˇî q Ω7    Üé!q ≈7    Åü*q Œ7    Ü∞!r ÷7    Å¬*r ‡7    ñ Â4s S8    ñ¯;t Z8    ñ Â?t h8    ì ÂDt ÿ8    ë &Ku å9    ë @Rv :    É Kw ¿8    ë {/x |9    ë \0Xz ‡:    ƒøî { ‚:    ƒ«n{ ;    Å ÷t| ,;    ·˚î ~ 4;    ·n~ =;    Üˇî        ∆6{       ∆JÄÄ       ∆r
+`Å E;    ñnçÇ U;    ñzíÇ ];    ÅÉ e;    ÅÉ n;    Éã„ Ñ Ñ;    ÉƒŸ Ñ ç;    Üˇî Ö ö;    ÜˇÖ §;    ÜˇòÜ ∫;    Ê6{à ‡;    ÊJÄâ |<    Êr
+`ä ô<    ëS*(ã •<    Üˇî ã ∏<    Üˇ•ã ’<    ÜΩi ç ›<    Ü…m ç Ì<    Ü’i é ı<    ÜÂm é ˛<    Ü∞è =    Åµè =    Ü7ªê =    ÜH¿ê  =    Ü∆ë (=    Üœë 4=    ì `·í Ä=    É li ì ª=    ëéÊì À=    ë ŒÍì ﬂ=    ëS*(ì ˆ=    ñì >    ñ∏Êì %>    ñ–ì 3>    ñÌî C>    ñ"î L>    ë 1(ï z>    ëS*(ï ò>    Üﬂi ï †>    ÜËm ï ©>    ÜÒi ñ ±>    Ü˝m ñ ∫>    Ü		i ó ¬>    Ü#	m ó À>    ÜWÍò ”>    Édjò ‹>    Üˇî ô ‰>    Üˇî ô Ï>    ì ™6ô |?    ì æ6õ ¿?    ÊC¥ ù Ô?    Ésü ¸?    É›Dü 
+@    Ü Êm † @    Ü ÊJ° (@    Ü ]î £ 8@    ë ÊR£ ‰@    ∆˙]¶ B    Üˇî ® /B    ÜˇJ® EB    Üi ™ MB    Ü#m ™ VB    Ü1u´ ^B    Ü:{´ hB    Ü CÇ¨ öB    Üˇm ≠ √B    Üåi Æ ÀB    Ü†m Æ ‘B    É¬+Ø ‹B    É”/Ø ËB    Ü ‰`∞ "C    ∆ Ï{± :C    ∆ ˜{≤ TC    ∆ í≥ xC    ∆ ò¥ ôC    Üˇûµ ©C    Üc¶∑ ±C    Ül¨∑ ∫C    ∆ u≥∏ «C    Üˇ√∏ ◊C    Ü£À∫ ﬂC    Ü±—∫ ËC    ∆ÿª ,D    ∆øÿª 3D    ∆Ãÿª :D    Üˇî ª HD    Ü ]î ª PD    Å lî ª çD    Ü ~m ª òD    ë è˝º »D    Ü ~Jæ ÙE    Ü ¢¿ ¿F    Ü Ø]¬ ÛF    Üˇî ƒ ˚F    ÜˇJƒ G    Ü1u∆ G    Ü:{∆ "G    Ü¬i « *G    ÜŒm « 4G    Ü ⁄Ç»       ∆„{… fG    Üˇ{  uG    ∆ „{À xG    ÜˇJÃ ÇG    ∆ „{Œ ëG    ÜˇJœ õG    ∆ „{— ™G    ÜˇJ“ ≈G    Å1‘ ÕG    Å;‘ ÷G    ∆ „{’ ‰G    Üb„ ÷ ÏG    ÉrŸ ÷ ıG    ÜÇ◊ ˝G    Éó◊ H    Üri ÿ H    Éàm ÿ H    Ü¨+Ÿ H    Ü∆/Ÿ (H    Ü∏+⁄ 0H    Ü–/⁄ 9H    ÉÌ'€ AH    É,€ LH    Ü+‹ …H    Ü/‹ ◊H    É22› ‡H    Üˇ;› SI    Éˇî ‡ fI    Üˇm ‡ pI    ÜˇR· ôI    ÜAi „ °I    ÜQm „ ™I    Üb]‰ ≤I    ∆af‰ ‹I    Üˇ|Ê ˝I    Üìi Î J    Ü•m Î J    Ü∑åÏ J    Ü«íÏ J    Ü◊+Ì 'J    Ü/Ì 0J    ë 	ôÓ ‰J    Ü ¢ ‹L    ∆ afÙ ∑J    Å ÿ3Sˆ ﬁJ    ë Ô3Y˜ /M    ÉÌ'¯ @M    É,¯ IM    É¥Å˘ QM    Éø„˘ ZM    Üˇî ˙ dM    É !
+Ω˙ †M    É  ≈˚ àN    É )
+œ˝ ˘N    Üåi O    Ü†m 
+O    ÜO    Ü&O    Ü¯i #O    Ü6m ,O    ÜV4O    Ül˙=O    Üˇî HO    ñ ¯–O    ë !HP    ñ )	¯P    ì }¨
+4Q    ì å≥ÑQ    ì ó≥‘Q    ì ™∫±R    ìã≈∆R    ìƒ ŒR    ë∫–⁄R    ñÿ;·R    ñÌ’ÈR    ñ Z⁄¯R    ñ ·YS    ñ ÈfS    ëS*(rS    ìã≈áS    ìƒ èS    ë∫–õS    ñÿ;¢S    ñÌ’™S    ñ Z⁄∏S    ñ ·T    ñ È&T    ëS*(2T    Üˇm <T    ÜˇÆ xT    Üˇm úT    ÜˇÆ        ∆,˘"ƒT    ë ?%ÙT    ë ]&]U    ë s·'pU    ì ì6(ºU    ë ¨*U    ë ø+DV    ë Õ·.‹V    Ê,˘/HX    Üˇî 2<X    ëS*(2      ∆CP2PX    ∆CP4ÊX    Üˇî 6–X    ëS*(6      ∆Û]6X    ë ˛28»Y    ë  G9t[    ∆Û]>î\    Üˇî @à\    ëS*(@ú\    ÜˇÆ @®\    Üˇ≠B¥\    ÜˇlE¿\    ÜˇsH%]    Üìi L0]    Ü•m LÇ]    ÜÒi Mä]    Ü˝m Më]    É∑åNô]    É«íN¢]    Ü◊+O™]    Ü/Oº]    ∆ ˚	ÚP:^    ë A ~Qd^    ì e ÉRî^    ì z ÉSƒ^    ì é äT_    ì ¢ ~VO_    Åˇî WW_    ÊŒóWá_    Ê’üY¢_    Ê·•Z“_    ëS*(\‡_    ì Ã ≤\à`    ∆CP^%a    Üˇî `a    ëS*(`-a    Ü’i `5a    ÜÂm `>a    Üˇî aFa    Üˇm aXa    ÊCPbıa    ëS*(db    ñ Ú (d b    Éˇî d(b    ìV!Ãdgb    ìj!“dnb    ìv!ÿdvb    ìÇ!;eåb    ì•!;e¢b    ì¡!;e∏b    ìÂ!;eŒb    ì˝!;e‰b    ì";e˙b    ì,";ec    ìM";e&c    ì]";e<c    ìw";eRc    ìê";ehc    ì≤";e~c    ì 6eÃ$    Üˇî g‘$    Ü ô+À
+g@?    Üˇî hH?    Ü Â1"hÃE    Üˇî i‘E    Ü 3ÈióF    Üˇî jüF    Ü E3júJ    Üˇî k§J    Ü ™3SkÀJ    Ü ¡3SlÑY    Üˇî måY    Üˇî mîY    Ü 75m   $   *$   /$   $   *$   :$   :$   @$   B$   D$   @$   B$   H$   :$   :$   :$   $   L$   R$   R$   Z$   R$   Z$   a$   R$   R$   Z$   R$   Z$   a$   †*   R$   :$   :$   :$   :$   R$   j$   o$   v$   Ä$   ö$   ¶$   '   G+   :$   :$   :$   v$   ö$   ™$   /$   ö$   /$   ö$   ö$   ™$   :$   :$   :$   :$   :$   :$   :$   R$   R$   ≤$   ¿$   R$   Ã$   ö$   /$   Ÿ$   Ó$   Ÿ$   Ó$   ¸$   R$   R$   R$   R$ %   R$   R$   R$   a$   a$   R$   $%   :$   :$   :$   :$   Z$   ,%   7%   7%   <%   <%   %   <%   Z$   N%   :$   :$   S%   <%   :$   :$   R$   a%   R$   :$   :$   e%   r%   e%   v%   ~%   ï%   ú%   m0   â%   ï%   ú%   â%   ö$   ö$   ö$   :$   :$   :$   û%   û%   R$   ö$   ö$   ö$   ¶%   Æ%   :$   :$   :$   :$   :$   L$   :$   :$   :$   :$   :$   :$   ¥%   ¶$   ¥%   ¶%   $   L$   º%   ¬%   ¬%   Ã%   R$   *$   —%   R$   Æ%   ¬%   Ã%   :$   :$   Ê%   ˜%   :$   :$   ö$   ö$   &   ö$   &   ö$   *$   :$   ö$   &   :$   &   Ã%   !&   )&   Ã%   R$   1&   R$   Æ%   )&   Ã%   :$   :$   Ê%   L$   Ã%   L$   )&   Ã%   L$   )&   Ã%   L$   )&   Ã%   :$   L$   :$   :$   :$   :$   :$   :$   :$   R$   ~%   <%   ö$   ö$   /$   :$   Æ%   R$   :&   Ó$   ?&   ¸$   /$   :$   :$   :$   K&   R$   R$   Ÿ$   O&   Æ%   Æ%   R$   *$   *$   :$   :$   Ã$   ö$   /$   Ÿ$   Ó$   ?&   ¸$   /$   :$   :$   :$   :$   W&   b&   b&   b&   L$   L$   L$   k&   )&   p&   :$   :$   Ä$   v$   Ä$   ö$   :$   :$   Ä$   v$   Ä$   ö$   ö$   ö$   ™$   ö$   ö$   ™$   Z$   R$   Æ%   }&   Z$   }&   ã&   ì&   r%   R$   *$   ú&   ≠&   Z$   R$   Æ%   R$   a$   R$   a$   R$   Æ%   Æ%   ∏&   Æ%   ¡&   …&   ‘&   R$   Æ%   €&   Ó$   €&   Ó$   /$   €&   Ó$   ¸$   €&   Ó$   ¸$   /$   :$   :$   :$   :$   R$   Ê&   Ô&   ˘&   ö$   p&   Ó$   @$   B$   D$   @$   B$   Z$   '   R$   a$   :$   	'   R$   a$   :$   '   :&   ¡+   2   "3   †*   *$   *$   †*   
+          !  @   / ∏ 1 ¿ 3 » 6  6  7 ¿ 8 ¿  ‘'1 ‘0A øî A «nYˇî aˇm iˇm qˇm yˇm Åˇm âˇm ëˇm ôˇm °ˇm ©ˇm ±ˇ/πˇ/¡ˇm …ˇm —ˇm ŸˇÌÈˇm Òˇıˇ¸	ˇî < ˇî 	 ˇî < ¨)™	ˇm ˇî Q u≥!ˇ¥	)˛)i 1øî D sL ‘'T n–	π "*+AAi IŒ‰		 ’I·Ì	Yˇˆ	! ˇî y $
+i›*
+\ ˇî d ˇN
+yÁ*T
+\ ¨)™	Å˜*s
+I +y
+i%+Ö
+l Êï
+t ˇN
+| T++| ˘–	| ˇï
+y =	µ
+ë›ª
+ëm+¿
+Ñ «+ÿ
+å ˇî Ñ ˇî î ‘'ú n–	å Êï
+§ ‘'¨ n–	Ñ Êÿ
+¥ ˇN
+y–+I÷+~Q‰+“I	,N°ˇî °*,x©=,;	 I,i ô ˇm ±^,ìy x,ü¡Ñ,i t ¨,•·≈,µ—„,·º ˇî IÒ,ÀQ¸,“AˇÆ ƒ Êï
+Ã ˇî $ ‘‘ n–	‘ "*+ƒ s‹ ‘'‰ n–	¡-i )„O¡[-Y·U`Ik-O¡y-Y·›`Ò Ö-_Ò é-gy ´-oÈ∏-¸È«-m IÕ-áIÕ-6… n†… $
+\ ˇ™	\ ]î \ ‘Ï n–	il*
+Ï "*+ÈÂm ÈªÒË-¿Ò¯-/Å.s
+Å.¡Ò.»Ò$./Ò9.»Ò`.œ˘m+’Å.‰Ù ˇÚ¸ ˇÚˇî 	ˇí¸ ™.ÿ
+¸ ›¸ m+Ù m+Êï
+Ù ™.ÿ
+Ù ›¸ sI∂.¥ Iæ.EI .MÙ ]î ¸ ]î ]î Ù lÿ
+¸ lÿ
+Ù sÙ ‰.^ˇ™	ˇx$‘ã¡Ô.i ¡ ã†!ÌI Ï{I ˜{y /•… ´-∂)]î 1=/¬yI/…4ˇN
+yN/ÎI íA∑/Aƒ/i Yˇm Ÿ ˇî ·Û/#a 0)i$0/Ÿ 807qÊ=Ÿ N0¥	IˇN
+Ÿ S0G· ñ0`· £0¬<ˇN
+D‘'Ln–	y∏0éÅˇN
+¡ Õ0¥T‘'\n–	\ Êï
+Ò ˜*ÂâÚ0Íâ˛0ë`ˆô'1˝I61{ °éÊ©ˇî ±ˇî ·s1·k-… {1+Ií1~I•1Àπ¡1·¡2)…›/Ÿ˘i )ˇm ·ˇN
+)∂.6π·Èˇm dsd›XdÊï
+d]î ÒV2·Ai Òg2·Òt2·Iê2Òõ26I∂.^lˇÚl«+ÿ
+d‘tn–	Ã Êï
+lÊÿ
+t"*+dˇî I ˇî ˘£2~£2~	ˇm ˇm Q ˇm 	µ2®Y ˇm |ˇî æ2µ÷2i |Êï
+ˇî Ñ ˇÚÑˇî ÑÊï
+I .‘åˇN
+y$3¯îˇN
+)„{y ^35¡ v3:Y Ãÿπ n@Y ÿúˇN
+§ˇN
+yB4É¨‘'¥n–	Ã ¨)™	I ò$ ˇî y«+Iæ.$ Êï
+˘µ26º¨,ï
+ƒn–	I«+{)J4·)ˇhÃˇî Ãm+‘›X	 s1§·÷2i )I,™1_4˝Ã|4æ‹‘“‰n–	Ã›IÕ-Ê‰"*+°Ö4x·ê4Iˇî Qˇî Q‰4,IÙ43I5;ÏsÙˇÚÙ™.ÿ
+Ù›¸Êÿ
+¸ˇÚÙm+Ã ˇ™	Ã N5õÃ ‘n–	"*+sÙs‘'n–	iˇî Ii5i ‘'$n–	qˇî qâ5Gqõ5/Iπ5Ny 5`πg2·ÅˇrëÄ6ÇôˇÆ °ˇî 	 €6 Iˇ–IÎ6ﬁπõ26 D ã ® ° ¨  IÎ å· êÊ îÎ ¨· ∞Ê ¥Î ∏0 º5 ¿: ƒR »W. ≥ '. ≥ ò. ª Ê. ´ Ï. K T. S Z. ì õ. £ ≈. √ . À . 3 Ô. ; 7. C T. c i. r ÷. [ 7. { ä. ã ï. k T. É Ta Û ÊÉ [˝	† Û Ê° Û Ê¿ Û Ê¡ Û Ê· Û Ê¡Û Ê‡Û Ê·Û Ê Û ÊÛ Ê Û Ê@Û Ê√√G!Û ÊAÛ Ê`Û ÊaÛ ÊÅÛ Ê°Û Ê¡Û Ê·Û ÊÛ Ê!Û Ê$+ ÊÄÛ ÊÅÛ Ê°Û Ê¿Û Ê¡Û Ê‡Û Ê·Û Ê Û Ê Û ÊaÛ ÊÑ+ Êƒ+ ÊÛ Ê!Û Ê#+
+yAÛ ÊCÛ ÊC;
+âCC
+Ê`Û ÊÄÛ ÊÉÛ Ê†Û Ê£Û Ê¿Û Ê√Û Ê„Û ÊÛ ÊÛ Ê!Û Ê#Û ÊAÛ ÊCÛ ÊaÛ Ê°Û Ê¡Û Êƒ+ Ê‡Û Ê 	Û Ê	Û Ê	+ Ê!	Û ÊA	Û Ê·	Û Ê
+Û Ê!
+Û ÊÅ
+Û Ê°
+Û Ê¡
+Û Ê·
+Û ÊÛ Ê!Û Ê`Û ÊaÛ ÊÄÛ ÊÅÛ Ê°Û Ê¡Û Ê·Û Ê!Û Ê©+
+Ê¿Û Ê¡Û Ê…+
+Ê‡Û Ê·Û ÊÛ Ê!Û Ê Û Ê Û Ê@Û Ê`Û Ê†Û Ê°Û Ê¿Û Ê‡Û Ê Û ÊAÛ Ê¿Û Ê‡Û Ê Û Ê Û Ê Û Ê@Û Ê¿Û Ê‡Û Ê†Û Ê¿Û Ê‡Û Ê Û Ê Û Ê@Û Ê Û Ê@Û Ê`Û ÊÄÛ Ê†Û Ê¿Û Ê‡Û Ê Û Ê‡Û Ê Û Ê Û Ê@Û Ê†Û Ê¿Û Ê‡Û Ê Û Ê`Û ÊÄÛ Ê@Û ÊD+ Ê`Û ÊÄÛ ÊÑ+ Ê†Û Ê$ + Ê‡ Û Ê !Û Ê@!Û Ê`!Û ÊÄ!Û Ê†!Û Ê¿!Û Ê‡!Û Ê "Û Ê "Û Ê@"Û ÊD"+ Ê`"Û ÊÄ"Û ÊÑ"+ Ê†"Û Ê#+ ÊD#+ Ê†#Û Ê¿#Û Ê@$Û Ê`$Û ÊÄ$Û Ê†$Û Ê¿$Û Ê‡$Û Ê`%Û ÊÄ%Û Ê‡%Û Ê &Û Ê†&Û Ê¿&Û Ê‡&Û Ê 'Û Ê 'Û Ê@'Û Ê`'Û ÊÄ'Û ÊÑ(+ Êd)+ Ê /Û Ê /Û Ê`1Û ÊÄ1Û Ê’	õ
+∆
+%XÆæ‹'6@FUuÇéîõ¨€,=RZ´º N{õªŒ>d}¢º⁄/D∏Ù˘*EVp~Öì±∏Ó	On≠Á%;Vlÿ      	  
+     !  #  &  )  ,  2  5  9  ;  =  ?  @  D   F ! G " O # Q $ T & V * Z + ] 4 ` 8 d : e   ¬~   ¶É   ∫á   9É   =É   ¯k   p  z    "Ñ  =É   ÄÑ  )É   .É   6É   ∫c  Lm  Rs  Zy  bÑ  ÇÉ   ï  ü9  •>  ÚG  ∂G  ÖL  ∆Q  ’\  ¯k  „Ñ  Íf  CÉ   H  Aú  OÉ   aÑ  ëa  ûa  ¨j  ü†    ¯k  ;É   CÉ   O¯  \˝  H  i  ,  C  Æ1  )É   .É   6É   °  Íf  o  }É   áå  =É   MÑ  êΩ  ˜‚  HË  Ë  
+Ë  áå  É   \!  Ûk  “   OÉ   Ñ  CÑ  ÆD  Ñ  &I  áÉ   ∫s  ëÉ   °∑  üÑ  ÆD  À ú  =É   Q  ¨É   Ê  ¯Ô  Ù  j  ¯Ô  Ù  j  ëÉ   .É   °∑  üÑ  CÉ   	!ﬂ  ‡"Â  Ë"j  #j  #j  ?#j  S#j  k#j  z#j  ó#j  £#j  π#j  Œ#j  Ï#j                 	   	                 !       "   #   $   %   /   .   0   1   :   9   <   ;   =   >   ? !  @ #  B %  A %  C '  D '  E )  F )  G +  H +  I -  \ /  [ /  ] 1  ^ 3  _ 5  ` 7  a 7  b 9  c ;  d =  e =  f ?  g ?  r A  x C  y C  { E  z E  } G  ~ G   I  Ä I  Å K  Ü M  á M  â O  à O  ã Q  ú S  ù S  û U  ü U  † W  ° W  ¨ Y  ´ Y  ≠ [  Æ [  Ø ]  ∞ ]  ≤ _  ± _  ≥ a  ¥ a  ∑ c  ∫ e  º g  ª g  Ω i  æ i  ¡ k  ¬ k  ƒ m  √ m  ≈ o  ∆ o  « q  » q  Œ s  œ u  ÿ w  ◊ w  ⁄ y  Ÿ y  › {  ﬁ {  ‡ }  ﬂ }  Ë   Á   Î Å  Ï Å  Ì É  Ó Ö  Ô á  ˙ â  ˚ â  ¸ ã  ˝ ã  ç  ç  è  
+è  ë  ë  ì  ì  ï  ï  ó  ó  ô  ô  õ  õ  ù  ü  ü  °  "£  #£  $•  %•  'ß  &ß  .©  -©  /´  0´  

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="AWStats 7.5 (build 20160301) from config file awstats.okul34.com.conf (http://www.awstats.org)">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="description" content="Awstats - Advanced Web Statistics for okul34.com (2017-09) - lasthosts">
+<title>Statistics for okul34.com (2017-09) - lasthosts</title>
+<style type="text/css">
+body { font: 11px verdana, arial, helvetica, sans-serif; background-color: #FFFFFF; margin-top: 0; margin-bottom: 0; }
+.aws_bodyl  { }
+.aws_border { border-collapse: collapse; background-color: #CCCCDD; padding: 1px 1px 1px 1px; margin-top: 0px; margin-bottom: 0px; }
+.aws_title  { font: 13px verdana, arial, helvetica, sans-serif; font-weight: bold; background-color: #CCCCDD; text-align: center; margin-top: 0; margin-bottom: 0; padding: 1px 1px 1px 1px; color: #000000; }
+.aws_blank  { font: 13px verdana, arial, helvetica, sans-serif; background-color: #FFFFFF; text-align: center; margin-bottom: 0; padding: 1px 1px 1px 1px; }
+.aws_data {
+	background-color: #FFFFFF;
+	border-top-width: 1px;   
+	border-left-width: 0px;  
+	border-right-width: 0px; 
+	border-bottom-width: 0px;
+}
+.aws_formfield { font: 13px verdana, arial, helvetica; }
+.aws_button {
+	font-family: arial,verdana,helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid #ccd7e0;
+	background-image : url(AWStats/icon/other/button.gif);
+}
+th		{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; padding: 1px 2px 1px 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:center; color: #000000; }
+th.aws	{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; padding: 1px 2px 1px 1px; font-size: 13px; font-weight: bold; }
+td		{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:center; color: #000000; }
+td.aws	{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:left; color: #000000; padding: 0px;}
+td.awsm	{ border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; font: 11px verdana, arial, helvetica, sans-serif; text-align:left; color: #000000; padding: 0px; }
+b { font-weight: bold; }
+a { font: 11px verdana, arial, helvetica, sans-serif; }
+a:link    { color: #0011BB; text-decoration: none; }
+a:visited { color: #0011BB; text-decoration: none; }
+a:hover   { color: #605040; text-decoration: underline; }
+.currentday { font-weight: bold; }
+</style>
+</head>
+
+<body style="margin-top: 0px">
+<a name="top"></a>
+
+
+
+<a name="menu">&nbsp;</a>
+<form name="FormDateFilter" action="AWStats/cgi-bin/awstats.pl?config=okul34.com&amp;output=lasthosts" style="padding: 0px 0px 20px 0px; margin-top: 0">
+<table class="aws_border" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td>
+<table class="aws_data sortable" border="0" cellpadding="1" cellspacing="0" width="100%">
+<tr><td class="aws" valign="middle"><b>Statistics for:</b>&nbsp;</td><td class="aws" valign="middle"><span style="font-size: 14px;">okul34.com</span></td><td align="right" rowspan="3"><a href="http://www.awstats.org" target="awstatshome"><img src="AWStats/icon/other/awstats_logo6.png" border="0" alt='Awstats Web Site' title='Awstats Web Site' /></a><br /></td></tr>
+<tr valign="middle"><td class="aws" valign="middle" width="150"><b>Last Update:</b>&nbsp;</td><td class="aws" valign="middle"><span style="font-size: 12px;">09 Sep 2017 - 03:32</span></td></tr>
+<tr><td class="aws" valign="middle"><b>Reported period:</b></td><td class="aws" valign="middle"><select class="aws_formfield" name="month">
+<option value="01">Jan</option>
+<option value="02">Feb</option>
+<option value="03">Mar</option>
+<option value="04">Apr</option>
+<option value="05">May</option>
+<option value="06">Jun</option>
+<option value="07">Jul</option>
+<option value="08">Aug</option>
+<option selected="selected" value="09">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+<option value="all">- Year -</option>
+</select>
+<select class="aws_formfield" name="year">
+<option selected="selected" value="2017">2017</option>
+</select>
+<input type="hidden" name="output" value="lasthosts" />
+<input type="hidden" name="config" value="okul34.com" />
+<input type="submit" value=" OK " class="aws_button" /></td></tr>
+</table>
+</td></tr></table>
+</form><br />
+
+<table>
+<tr><td class="aws"><a href="javascript:parent.window.close();">Close window</a></td></tr>
+</table>
+
+<a name="hosts">&nbsp;</a><br />
+
+<form name="FormFilter" action="AWStats/cgi-bin/awstats.pl?config=okul34.com&amp;" class="aws_border">
+<table valign="middle" width="99%" border="0" cellspacing="0" cellpadding="2"><tr>
+<td align="left" width="50">Filter&nbsp;:</td>
+<td align="left" width="100"><input type="text" name="hostfilter" value="" class="aws_formfield" /></td>
+<td> &nbsp; </td><td align="left" width="100">Exclude filter&nbsp;:</td>
+<td align="left" width="100"><input type="text" name="hostfilterex" value="" class="aws_formfield" /></td>
+<td><input type="hidden" name="output" value="lasthosts" />
+<input type="hidden" name="config" value="okul34.com" />
+<input type="submit" value=" OK " class="aws_button" /></td>
+<td> &nbsp; </td></tr></table>
+</form>
+<br />
+
+<table class="aws_border sortable" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td class="aws_title" width="70%">Last visit </td><td class="aws_blank">&nbsp;</td></tr>
+<tr><td colspan="2">
+<table class="aws_data" border="1" cellpadding="2" cellspacing="0" width="100%">
+<tr bgcolor="#ECECEC"><th>Total : 0 Known, 57 Unknown (unresolved ip) - 50 Unique visitors</th><th width="80"><a href="#countries">GeoIP<br />Country</a></th><th bgcolor="#4477DD" width="80">Pages</th><th bgcolor="#66DDEE" width="80">Hits</th><th class="datasize" bgcolor="#2EA495" width="80">Bandwidth</th><th width="120">Last visit</th></tr>
+<tr><td class="aws">88.237.24.117</td><td>Turkey</td><td>167</td><td>3,058</td><td>222.65 MB</td><td>09 Sep 2017 - 03:07</td></tr>
+<tr><td class="aws">52.53.150.48</td><td>United States</td><td>1</td><td>1</td><td>1013 Bytes</td><td>08 Sep 2017 - 21:53</td></tr>
+<tr><td class="aws">94.122.152.167</td><td>Turkey</td><td>76</td><td>163</td><td>4.49 MB</td><td>08 Sep 2017 - 20:40</td></tr>
+<tr><td class="aws">66.249.93.14</td><td>European country</td><td>5</td><td>90</td><td>7.46 MB</td><td>08 Sep 2017 - 20:30</td></tr>
+<tr><td class="aws">66.249.93.15</td><td>European country</td><td>3</td><td>110</td><td>2.94 MB</td><td>08 Sep 2017 - 20:30</td></tr>
+<tr><td class="aws">66.249.93.13</td><td>European country</td><td>2</td><td>96</td><td>5.91 MB</td><td>08 Sep 2017 - 20:30</td></tr>
+<tr><td class="aws">54.221.86.124</td><td>United States</td><td>3</td><td>5</td><td>1.58 MB</td><td>08 Sep 2017 - 20:30</td></tr>
+<tr><td class="aws">5.24.233.86</td><td>Turkey</td><td>2</td><td>54</td><td>1.35 MB</td><td>08 Sep 2017 - 19:31</td></tr>
+<tr><td class="aws">92.44.58.168</td><td>Turkey</td><td>2</td><td>111</td><td>6.71 MB</td><td>08 Sep 2017 - 17:31</td></tr>
+<tr><td class="aws">78.187.110.17</td><td>Turkey</td><td>6</td><td>115</td><td>6.80 MB</td><td>08 Sep 2017 - 17:16</td></tr>
+<tr><td class="aws">92.45.129.244</td><td>Turkey</td><td>2</td><td>114</td><td>6.79 MB</td><td>08 Sep 2017 - 16:18</td></tr>
+<tr><td class="aws">66.249.91.26</td><td>United States</td><td>1</td><td>1</td><td>629 Bytes</td><td>08 Sep 2017 - 15:50</td></tr>
+<tr><td class="aws">84.51.15.210</td><td>Turkey</td><td>31</td><td>601</td><td>31.60 MB</td><td>08 Sep 2017 - 10:52</td></tr>
+<tr><td class="aws">112.198.246.84</td><td>Philippines</td><td>1</td><td>1</td><td>526.21 KB</td><td>08 Sep 2017 - 05:54</td></tr>
+<tr><td class="aws">166.88.123.115</td><td>United States</td><td>8</td><td>10</td><td>156.31 KB</td><td>07 Sep 2017 - 23:34</td></tr>
+<tr><td class="aws">52.211.229.193</td><td>Ireland</td><td>1</td><td>1</td><td>0</td><td>07 Sep 2017 - 23:04</td></tr>
+<tr><td class="aws">23.27.244.69</td><td>United States</td><td>45</td><td>363</td><td>20.16 MB</td><td>07 Sep 2017 - 20:05</td></tr>
+<tr><td class="aws">178.244.138.29</td><td>Turkey</td><td>2</td><td>105</td><td>4.39 MB</td><td>07 Sep 2017 - 12:00</td></tr>
+<tr><td class="aws">185.40.72.142</td><td>Turkey</td><td>30</td><td>608</td><td>30.36 MB</td><td>07 Sep 2017 - 11:32</td></tr>
+<tr><td class="aws">166.88.123.183</td><td>United States</td><td>3</td><td>5</td><td>77.01 KB</td><td>07 Sep 2017 - 00:57</td></tr>
+<tr><td class="aws">185.104.248.67</td><td>Russian Federation</td><td>2</td><td>2</td><td>141.46 KB</td><td>06 Sep 2017 - 18:47</td></tr>
+<tr><td class="aws">213.14.112.181</td><td>Turkey</td><td>2</td><td>110</td><td>7.31 MB</td><td>06 Sep 2017 - 16:52</td></tr>
+<tr><td class="aws">95.1.189.230</td><td>Turkey</td><td>2</td><td>110</td><td>7.31 MB</td><td>06 Sep 2017 - 10:47</td></tr>
+<tr><td class="aws">195.244.57.42</td><td>Turkey</td><td>2</td><td>2</td><td>140.84 KB</td><td>06 Sep 2017 - 08:21</td></tr>
+<tr><td class="aws">35.166.147.254</td><td>United States</td><td>1</td><td>1</td><td>523.33 KB</td><td>06 Sep 2017 - 04:40</td></tr>
+<tr><td class="aws">201.18.18.173</td><td>Brazil</td><td>4</td><td>4</td><td>2.01 MB</td><td>05 Sep 2017 - 13:51</td></tr>
+<tr><td class="aws">79.165.120.219</td><td>Russian Federation</td><td>3</td><td>145</td><td>8.74 MB</td><td>05 Sep 2017 - 13:20</td></tr>
+<tr><td class="aws">183.87.114.130</td><td>India</td><td>2</td><td>2</td><td>1.02 MB</td><td>05 Sep 2017 - 06:15</td></tr>
+<tr><td class="aws">45.76.9.132</td><td>United States</td><td>2</td><td>2</td><td>0</td><td>05 Sep 2017 - 00:17</td></tr>
+<tr><td class="aws">163.172.4.153</td><td>Great Britain</td><td>1</td><td>1</td><td>0</td><td>04 Sep 2017 - 22:11</td></tr>
+<tr><td class="aws">79.165.120.167</td><td>Russian Federation</td><td>3</td><td>145</td><td>8.74 MB</td><td>04 Sep 2017 - 21:25</td></tr>
+<tr><td class="aws">88.247.172.52</td><td>Turkey</td><td>370</td><td>5,074</td><td>295.50 MB</td><td>04 Sep 2017 - 18:30</td></tr>
+<tr><td class="aws">45.32.144.111</td><td>France</td><td>4</td><td>4</td><td>0</td><td>04 Sep 2017 - 17:44</td></tr>
+<tr><td class="aws">155.133.82.119</td><td>Poland</td><td>1</td><td>1</td><td>507.76 KB</td><td>04 Sep 2017 - 14:53</td></tr>
+<tr><td class="aws">109.63.194.64</td><td>Russian Federation</td><td>1</td><td>113</td><td>7.47 MB</td><td>04 Sep 2017 - 01:48</td></tr>
+<tr><td class="aws">178.246.182.36</td><td>Turkey</td><td>2</td><td>110</td><td>7.28 MB</td><td>03 Sep 2017 - 20:36</td></tr>
+<tr><td class="aws">185.174.137.249</td><td><span style="color: #666688">Unknown</span></td><td>1</td><td>1</td><td>507.76 KB</td><td>03 Sep 2017 - 19:18</td></tr>
+<tr><td class="aws">158.69.229.69</td><td>Canada</td><td>1</td><td>1</td><td>507.74 KB</td><td>03 Sep 2017 - 08:38</td></tr>
+<tr><td class="aws">178.137.82.201</td><td>Ukraine</td><td>2</td><td>2</td><td>1015.26 KB</td><td>03 Sep 2017 - 08:08</td></tr>
+<tr><td class="aws">88.99.2.215</td><td>Great Britain</td><td>1</td><td>1</td><td>507.74 KB</td><td>02 Sep 2017 - 12:38</td></tr>
+<tr><td class="aws">176.232.23.146</td><td>Turkey</td><td>2</td><td>79</td><td>1.24 MB</td><td>02 Sep 2017 - 11:59</td></tr>
+<tr><td class="aws">173.252.88.215</td><td>United States</td><td>2</td><td>29</td><td>1.51 MB</td><td>02 Sep 2017 - 09:48</td></tr>
+<tr><td class="aws">173.252.88.218</td><td>United States</td><td>1</td><td>31</td><td>2.44 MB</td><td>02 Sep 2017 - 09:48</td></tr>
+<tr><td class="aws">173.252.88.216</td><td>United States</td><td>2</td><td>57</td><td>3.21 MB</td><td>02 Sep 2017 - 09:48</td></tr>
+<tr><td class="aws">95.14.115.180</td><td>Turkey</td><td>2</td><td>110</td><td>7.31 MB</td><td>01 Sep 2017 - 22:39</td></tr>
+<tr><td class="aws">185.183.96.27</td><td><span style="color: #666688">Unknown</span></td><td>1</td><td>1</td><td>74.70 KB</td><td>01 Sep 2017 - 21:47</td></tr>
+<tr><td class="aws">204.174.223.210</td><td>Canada</td><td>1</td><td>1</td><td>507.76 KB</td><td>01 Sep 2017 - 20:55</td></tr>
+<tr><td class="aws">94.73.159.118</td><td>Turkey</td><td>1</td><td>1</td><td>399.73 KB</td><td>01 Sep 2017 - 17:02</td></tr>
+<tr><td class="aws">5.228.129.60</td><td>Russian Federation</td><td>2</td><td>44</td><td>566.93 KB</td><td>01 Sep 2017 - 11:59</td></tr>
+<tr><td class="aws">31.10.163.143</td><td>Switzerland</td><td>2</td><td>111</td><td>7.34 MB</td><td>01 Sep 2017 - 11:08</td></tr>
+<tr><td class="aws">178.243.56.204</td><td>Turkey</td><td>&nbsp;</td><td>1</td><td>78.68 KB</td><td>-</td></tr>
+<tr><td class="aws">66.249.93.64</td><td>European country</td><td>&nbsp;</td><td>1</td><td>27.32 KB</td><td>-</td></tr>
+<tr><td class="aws">173.252.88.214</td><td>United States</td><td>&nbsp;</td><td>27</td><td>1.61 MB</td><td>-</td></tr>
+<tr><td class="aws">66.249.93.95</td><td>European country</td><td>&nbsp;</td><td>1</td><td>54.50 KB</td><td>-</td></tr>
+<tr><td class="aws">78.187.145.229</td><td>Turkey</td><td>&nbsp;</td><td>3</td><td>63.64 KB</td><td>-</td></tr>
+<tr><td class="aws">88.233.29.157</td><td>Turkey</td><td>&nbsp;</td><td>1</td><td>14.75 KB</td><td>-</td></tr>
+<tr><td class="aws">173.252.88.213</td><td>United States</td><td>&nbsp;</td><td>3</td><td>46.56 KB</td><td>-</td></tr>
+</table></td></tr></table><br />
+
+<br /><br />
+<span dir="ltr" style="font: 11px verdana, arial, helvetica; color: #000000;"><b>Advanced Web Statistics 7.5 (build 20160301)</b> - <a href="http://www.awstats.org" target="awstatshome">Created by awstats (plugins: geoip)</a>                                         

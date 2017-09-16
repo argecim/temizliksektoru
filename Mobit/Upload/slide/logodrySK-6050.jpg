@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright 1999-2017. Parallels IP Holdings GmbH. All Rights Reserved. -->
+<build confver="3.0" os_name="Windows-server" os_vendor="Microsoft" os_version="6.3" os_arch="x86_64" environment="" build_dir="dist-msi-Microsoft-2003-i386" ez-template-prefix="plesk9" ez-template-suffix="" headers_file="" send_feedback="true" uninstall_support="true">
+  <product id="panel">
+    <keypackages>
+      <upgrade_code>{BB97C2E6-CFBF-42a5-B983-DADE7674926E}</upgrade_code>
+      <upgrade_code>{420FF3A6-FF3D-4B04-A9F2-896B2692EFB7}</upgrade_code>
+    </keypackages>
+    <release id="PANEL_17_5_3_WIN" name="Plesk" version="17.5.3" />
+  </product>
+  <exact_required_autoinstaller version="3.21.0" binary_name="ai.exe" binary_directory="Autoinstaller_3.21.0" />
+  <!-- The <required_installer /> line below specifies transitional Autoinstaller version. Don't modify it. -->
+  <required_installer version="3.18.12" binary_name="ai.exe" binary_directory="Autoinstaller_3.18.12" />
+  <examine name="System checking..." scope="pre_any" options="--check-system" script="system_checker.exe" />
+  <bootstrapper>
+    <action sequence="post-patch" critical="false" exec-cmd="&quot;[PLESK_INSTALLDIR]\admin\bin\dbupgrade.exe&quot; --save-upgrade-history &quot;--mu-version=$MICROUPDATE_VERSION&quot;" />
+  </bootstrapper>
+  <component name="common" description="Base packages of Plesk" version_packages="panel" classes="plesk">
+    <keypackages>
+      <keypackage name="panel" />
+    </keypackages>
+    <package file="panel.msi" name="panel" version="17.5.3" release="" arch="noarch" md5="e358de661f029944273c1dd152fdb8d2" buildtime="" size="4739072">
+      <conflicts>plesk-panel-smb</conflicts>
+      <conflicts>plesk-control-panel</conflicts>
+      <conflicts>plesk-with-mssql</conflicts>
+      <requires>vcredist90</requires>
+      <requires>vcredist100</requires>
+      <requires>vcredist110</requires>
+      <requires>vcredist140</requires>
+      <provides>plesk-release</provides>
+      <detection property="installed.version">
+        <read-msi-info target="VersionString" upgrade-code="{BB97C2E6-CFBF-42a5-B983-DADE7674926E}" />
+      </detection>
+      <detection property="installed.ProductCode">
+        <read-msi-info target="ProductCode" upgrade-code="{BB97C2E6-CFBF-42a5-B983-DADE7674926E}" />
+      </detection>
+      <settings>
+        <setting id="PLESK_INSTALLDIR" type="path" exists="false" default-value="[GLOBAL.Path.ProgramFiles]\Plesk" behaviour="detectable">
+          <read-setting-value lock="true">
+            <read-registry-string root="HKLM" key="SOFTWARE\Plesk\PSA Config\Config" context="x86" value="PRODUCT_ROOT_D" />
+          </read-setting-value>
+          <name lang="en">Plesk installation directory</name>
+          <description lang="en">Specify the directory where Plesk should be installed.</description>
+          <error-message lang="en">Please, enter correct directory name.</error-message>
+        </setting>
+        <setting id="PLESK_DATADIR" type="path" exists="false" default-value="[PLESK_INSTALLDIR]" behaviour="detectable">
+          <read-setting-value lock="true">
+            <read-registry-string root="HKLM" key="SOFTWARE\Plesk\PSA Config\Config" context="x86" value="PRODUCT_DATA_D" />
+          </read-setting-value>
+          <name lang="en">Path for storing user data</name>
+          <description lang="en">Specify the path for storing user data such as mailboxes, databases and so on.</description>
+          <error-message lang="en">Please, enter correct directory name.</error-message>
+        </setting>
+        <setting id="PLESK_VHOSTSDIR" type="path" exists="false" default-value="[GLOBAL.Path.SystemDrive]\Inetpub\vhosts" behaviour="detectable">
+          <read-setting-value lock="true">
+            <read-registry-string root="HKLM" key="SOFTWARE\Plesk\PSA Config\Config" context="x86" value="HTTPD_VHOSTS_D" />
+          </read-setting-value>
+          <name lang="en">Path for storing content of Web sites</name>
+          <description lang="en">Specify the path for storing the contents (virtual hosts) of Web sites hosted on this server.</description>
+          <error-message lang="en">Please, enter correct directory name.</error-message>
+        </setting>
+      </settings>
+      <actions sequence="install" displayname="Installing Plesk settings...">
+        <install-msi-package command-line="ADDLOCAL=ALL INSTALLDIR=&quot;[PLESK_INSTALLDIR]&quot; DATADIR=&quot;[PLESK_DATADIR]&quot; VHOSTSDIR=&quot;[PLESK_VHOSTSDIR]&quot; ALLUSERS=1 ARPSYSTEMCOMPONENT=1 AUTOINSTALLER=1 REBOOT=R" />
+      </actions>
+      <actions sequence="upgrade" displayname="Upgrading Plesk settings...">
+        <install-msi-package command-line="ADDLOCAL=ALL INSTALLDIR=&quot;[PLESK_INSTALLDIR]&quot; DATADIR=&quot;[PLESK_DATADIR]&quot; VHOSTSDIR=&quot;[PLESK_VHOSTSDIR]&quot; ALLUSERS=1 ARPSYSTEMCOMPONENT=1 AUTOINSTALLER=1 REBOOT=R" />
+      </actions>
+      <actions sequence="remove" displayname="Uninstalling Plesk settings...">
+        <remove-msi-package product-code="[installed.ProductCode]" command-line="REBOOT=R" />
+      </actions>
+    </package>
+    <package file="plesk-service-node-utilities_mu021.msi" name="plesk-service-node-utilities" version="17.5.7765" release="" arch="noarch" md5="40b66fce70916356ab94bea107cedce2" buildtime="" size="72546532">
+      <requires>plesk-release</requires>
+      <requires>vcredist90</requires>
+      <requires>vcredist110</requires>
+      <requires>vcredist140</requires>
+      <requires>dotnet45 &gt;= 4.5</requires>
+      <requires>sql-sys-clrtypes-2008</requires>
+      <requires>sql-smo</requires>
+      <requires>sqlncli</requires>
+      <requires>IIS-ManagementScriptingTools</requires>
+      <requires>IIS-HttpTracing</requires>
+      <requires>urlrewrite</requires>
+      <requires>requestrouter</requires>
+      <requires>plesk-urlprotection</requires>
+      <detection property="installed.version">
+        <read-msi-info target="VersionString" upgrade-code="{7468A7C0-B08B-4BEA-9BEA-2A4C60B672D5}" />
+      </detection>
+      <detection property="installed.ProductCode">
+        <read-msi-info target="ProductCode" upgrade-code="{7468A7C0-B08B-4BEA-9BEA-2A4C60B672D5}" />
+      </detection>
+      <actions sequence="install" displayname="Installing Plesk Utilities...">
+        <install-msi-package command-line="REINSTALL=ALL REINSTALLMODE=vmscd ADDLOCAL=ALL ALLUSERS=1 ARPSYSTEMCOMPONENT=1 REBOOT=R AUTOINSTALLER=1" />
+      </actions>
+      <actions sequence="upgrade" displayname="Upgrading Plesk Utilities...">
+        <install-msi-package command-line="REINSTALL=ALL REINSTALLMODE=vmscd ADDLOCAL=ALL ALLUSERS=1 ARPSYSTEMCOMPONENT=1 REBOOT=R AUTOINSTALLER=1" />
+        <service-control name="PopPassD" action="start" critical="false" />
+        <execute program="[PLESK_INSTALLDIR]\admin\bin64\ApplySecurity.exe" command-line="--apply-to-directory --directory=&quot;[PLESK_INSTALLDIR]\isapi&quot;" critical="false" />
+      </actions>
+      <actions sequence="remove" displayname="Uninstalling Plesk Utilities...">
+        <remove-msi-package product-code="[installed.ProductCode]" command-line="REBOOT=R" />
+      </actions>
+    </package>
+    <package file="plesk-service-node.msi" name="plesk-service-node" version="17.5.3784" release="" arch="noarch" md5="8599a6828714809207a897e2c81248c7" buildtime="" size="1323008">
+      <requires>plesk-release</requires>
+      <requires>iis-web-components</requires>
+      <requires>IIS-StaticContent</requires>
+      <requires>IIS-DefaultDocument</requires>
+      <requires>IIS-DirectoryBrowsing</requires>
+      <requires>IIS-HttpErrors</requires>
+      <requires>IIS-HttpRedirect</requires>
+      <requires>IIS-HttpLogging</requires>
+      <requires>IIS-HttpTracing</requires>
+      <requires>IIS-BasicAuthentication</requires>
+      <requires>IIS-WindowsAuthentication</requires>
+      <requires>IIS-IPSecurity</requires>
+      <requires>IIS-ASP</requires>
+      <requires>aspnet</requires>
+      <requires>IIS-FTPServer</requires>
+      <!-- TODO: probably this should be moved to web-sevice-node package later -->
+      <requires>plesk-service-node-utilities</requires>
+      <detection property="installed.version">
+        <read-msi-info target="VersionString" upgrade-code="{B2D9EEAC-46B8-449c-8646-55F1C89E82A5}" />
+      </detection>
+      <detection property="installed.ProductCode">
+        <read-msi-info target="ProductCode" upgrade-code="{B2D9EEAC-46B8-449c-8646-55F1C89E82A5}" />
+      </detection>
+      <actions sequence="install" displayname="Installing Plesk Service Node...">
+        <install-msi-package command-line="REINSTALL=ALL REINSTALLMODE=vmscd ADDLOCAL=ALL ALLUSERS=1 ARPSYSTEMCOMPONENT=1 REBOOT=R AUTOINSTALLER=1" />
+      </actions>
+      <actions sequence="upgrade" displayname="Upgrading Plesk Service Node...">
+        <install-msi-package command-line="REINSTALL=ALL REINSTALLMODE=vmscd ADDLOCAL=ALL ALLUSERS=1 ARPSYSTEMCOMPONENT=1 REBOOT=R AUTOINSTALLER=1" />
+      </actions>
+      <actions sequence="remove" displayname="Uninstalling Plesk Service Node...">
+        <remove-msi-package product-code="[installed.ProductCode]" command-line="REBOOT=R" />
+      </actions>
+    </package>
+    <package file="plesk-site.msi" name="plesk-site" version="17.5.3784" release="" arch="noarch" md5="706d97465f09166b3481e3444a68571c" buildtime="" size="991232">
+      <requires>plesk-release</requires>
+      <requires>iis-web-components</requires>
+      <requires>IIS-StaticContent</requires>
+      <requires>IIS-DefaultDocument</requires>
+      <requires>IIS-DirectoryBrowsing</requires>
+      <requires>IIS-HttpErrors</requires>
+      <requires>IIS-HttpRedirect</requires>
+      <requires>IIS-HttpLogging</requires>
+      <requires>IIS-BasicAuthentication</requires>
+      <requires>IIS-WindowsAuthe

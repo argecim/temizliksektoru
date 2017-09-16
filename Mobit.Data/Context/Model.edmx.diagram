@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db01e08bce2445f2aaf0d399c8307a8c" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Adminler" Width="1.5" PointX="0.75" PointY="13.25" />
+        <EntityTypeShape EntityType="Model.AdminRolIliski" Width="1.5" PointX="3" PointY="10.375" />
+        <EntityTypeShape EntityType="Model.AdminRolleri" Width="1.5" PointX="0.75" PointY="10.625" />
+        <EntityTypeShape EntityType="Model.AltKategoriler" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="Model.Bulten" Width="1.5" PointX="7.75" PointY="8.25" />
+        <EntityTypeShape EntityType="Model.Cozumler" Width="1.5" PointX="9.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Model.DosyaYoneticisi" Width="1.5" PointX="2.75" PointY="13.25" />
+        <EntityTypeShape EntityType="Model.ELMAH_Error" Width="1.5" PointX="11.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Model.Galeri" Width="1.5" PointX="7.75" PointY="12.5" />
+        <EntityTypeShape EntityType="Model.GaleriResim" Width="1.5" PointX="10" PointY="18.75" />
+        <EntityTypeShape EntityType="Model.HaberKategorileri" Width="1.5" PointX="10.75" PointY="15.625" />
+        <EntityTypeShape EntityType="Model.Haberler" Width="1.5" PointX="13" PointY="12" />
+        <EntityTypeShape EntityType="Model.ilceler" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.iletisim" Width="1.5" PointX="4.75" PointY="13.25" />
+        <EntityTypeShape EntityType="Model.iller" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="Model.Kategoriler" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="Model.Kurumlar" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="Model.KurumResim" Width="1.5" PointX="7.5" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.Markalar" Width="1.5" PointX="13.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Model.MetaTag" Width="1.5" PointX="14.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Model.Popup" Width="1.5" PointX="6.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Model.Reklamlar" Width="1.5" PointX="12.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Model.Sayfalar" Width="1.5" PointX="10" PointY="10.875" />
+        <EntityTypeShape EntityType="Model.Slider" Width="1.5" PointX="12" PointY="2.5" />
+        <EntityTypeShape EntityType="Model.SliderKategori" Width="1.5" PointX="9.75" PointY="3" />
+        <AssociationConnector Association="Model.FK_AdminRolIliski_Adminler" />
+        <AssociationConnector Association="Model.FK_AdminRolIliski_AdminRolleri" />
+        <AssociationConnector Association="Model.FK_AltKategoriler_Kategoriler" />
+        <AssociationConnector Association="Model.FK_Kurumlar_AltKategoriler" />
+        <AssociationConnector Association="Model.FK_GaleriResim_Galeriler" />
+        <AssociationConnector Association="Model.FK_Haberler_Galeri" />
+        <AssociationConnector Association="Model.FK_Sayfalar_Galeri" />
+        <AssociationConnector Association="Model.FK_Haberler_HaberKategorileri" />
+        <AssociationConnector Association="Model.FK_Counties_Cities" />
+        <AssociationConnector Association="Model.FK_Kurumlar_ilceler" />
+        <AssociationConnector Association="Model.FK_Kurumlar_iller" />
+        <AssociationConnector Association="Model.FK_Kurumlar_Kategoriler" />
+        <AssociationConnector Association="Model.FK_KurumResim_Kurumlar" />
+        <AssociationConnector Association="Model.FK_Slider_SliderKategori" />
+        <EntityTypeShape EntityType="Model.Anketler" Width="1.5" PointX="15.375" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.KurumEgitimciler" Width="1.5" PointX="7.5" PointY="1.125" />
+        <AssociationConnector Association="Model.FK_KurumEgitimciler_Kurumlar" />
+        <EntityTypeShape EntityType="Model.VW_Anketler" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Model.HaberlerResim" Width="1.5" PointX="15.25" PointY="13.875" />
+        <AssociationConnector Association="Model.FK_HaberlerResim_Galeriler" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

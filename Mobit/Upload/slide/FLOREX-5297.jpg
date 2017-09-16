@@ -1,0 +1,302 @@
+      #line hidden
+WriteLiteral("                                                                            <a");
+
+WriteAttribute("href", Tuple.Create(" href=\"", 5683), Tuple.Create("\"", 5707)
+, Tuple.Create(Tuple.Create("", 5690), Tuple.Create("/haber/", 5690), true)
+            
+            #line 77 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+            , Tuple.Create(Tuple.Create("", 5697), Tuple.Create<System.Object, System.Int32>(item.Slug
+            
+            #line default
+            #line hidden
+, 5697), false)
+);
+
+WriteLiteral(">\r\n                                                                              " +
+"  <div");
+
+WriteLiteral(" class=\"image-gallery-item\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"      <span");
+
+WriteLiteral(" class=\"thumb-info thumb-info-lighten\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"          <span");
+
+WriteLiteral(" class=\"thumb-info-wrapper\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"              <img");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 6174), Tuple.Create("\"", 6206)
+, Tuple.Create(Tuple.Create("", 6180), Tuple.Create<System.Object, System.Int32>(Href("~/Upload/haber/")
+, 6180), false)
+            
+            #line 81 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                     , Tuple.Create(Tuple.Create("", 6195), Tuple.Create<System.Object, System.Int32>(item.Resim
+            
+            #line default
+            #line hidden
+, 6195), false)
+);
+
+WriteLiteral(" class=\"img-responsive\"");
+
+WriteAttribute("alt", Tuple.Create(" alt=\"", 6230), Tuple.Create("\"", 6246)
+            
+            #line 81 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                              , Tuple.Create(Tuple.Create("", 6236), Tuple.Create<System.Object, System.Int32>(item.Slug
+            
+            #line default
+            #line hidden
+, 6236), false)
+);
+
+WriteAttribute("title", Tuple.Create(" title=\"", 6247), Tuple.Create("\"", 6263)
+            
+            #line 81 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                                 , Tuple.Create(Tuple.Create("", 6255), Tuple.Create<System.Object, System.Int32>(item.Ad
+            
+            #line default
+            #line hidden
+, 6255), false)
+);
+
+WriteLiteral(" style=\"width:100%;height:300px;\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"              <span");
+
+WriteLiteral(" class=\"thumb-info-title\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"                  <span");
+
+WriteLiteral(" class=\"thumb-info-inner\"");
+
+WriteLiteral(">");
+
+            
+            #line 83 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                                                          Write(item.Ad);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n                                                                        " +
+"                        <span");
+
+WriteLiteral(" class=\"thumb-info-type\"");
+
+WriteLiteral(">");
+
+            
+            #line 84 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                                                         Write(item.HaberKategorileri.Ad);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(@"</span>
+                                                                                            </span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </a>
+");
+
+            
+            #line 90 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                                                                    </div>\r\n");
+
+WriteLiteral("                                                                    <div");
+
+WriteLiteral(" class=\"owl-carousel owl-theme manual thumb-gallery-thumbs mt\"");
+
+WriteLiteral(" id=\"thumbGalleryThumbsS1\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 94 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                        
+            
+            #line default
+            #line hidden
+            
+            #line 94 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                         foreach (var item in db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 19).OrderByDescending(u => u.Id).ToList())
+                                                                        {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                                            <div");
+
+WriteLiteral(" class=\"image-gallery-item\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"  <span");
+
+WriteLiteral(" cğlass=\"thumb-info thumb-info-lighten\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"      <span");
+
+WriteLiteral(" class=\"thumb-info-wrapper\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"          <img");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 8226), Tuple.Create("\"", 8258)
+, Tuple.Create(Tuple.Create("", 8232), Tuple.Create<System.Object, System.Int32>(Href("~/Upload/haber/")
+, 8232), false)
+            
+            #line 99 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                 , Tuple.Create(Tuple.Create("", 8247), Tuple.Create<System.Object, System.Int32>(item.Resim
+            
+            #line default
+            #line hidden
+, 8247), false)
+);
+
+WriteLiteral(" class=\"img-responsive\"");
+
+WriteAttribute("alt", Tuple.Create(" alt=\"", 8282), Tuple.Create("\"", 8298)
+            
+            #line 99 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                          , Tuple.Create(Tuple.Create("", 8288), Tuple.Create<System.Object, System.Int32>(item.Slug
+            
+            #line default
+            #line hidden
+, 8288), false)
+);
+
+WriteAttribute("title", Tuple.Create(" title=\"", 8299), Tuple.Create("\"", 8315)
+            
+            #line 99 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                             , Tuple.Create(Tuple.Create("", 8307), Tuple.Create<System.Object, System.Int32>(item.Ad
+            
+            #line default
+            #line hidden
+, 8307), false)
+);
+
+WriteLiteral(" style=\"height:100px;width:100px;font-size:12px;\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"          <span");
+
+WriteLiteral(" class=\"thumb-info-title\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"              <span");
+
+WriteLiteral(" class=\"thumb-info-inner\"");
+
+WriteLiteral(" style=\"font-size:12px;\"");
+
+WriteLiteral(">");
+
+            
+            #line 101 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                                                                              Write(item.Ad);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("</span>\r\n                                                                        " +
+"                    <span");
+
+WriteLiteral(" class=\"thumb-info-type\"");
+
+WriteLiteral(">");
+
+            
+            #line 102 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                                                                     Write(item.HaberKategorileri.Ad);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(@"</span>
+                                                                                        </span>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+");
+
+            
+            #line 107 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                        }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                                    </div>\r\n");
+
+            
+            #line 109 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n\r\n                                                            </div>\r\n         " +
+"                                               </div>\r\n                         " +
+"                           </div>\r\n                                             " +
+"       <div");
+
+WriteLiteral(" class=\"tab-pane\"");
+
+WriteLiteral(" id=\"slayt\"");
+
+WriteLiteral(">\r\n                                                        <div");
+
+WriteLiteral(" class=\"thumb-gallery\"");
+
+WriteLiteral(">\r\n\r\n                                                            <div");
+
+WriteLiteral(" class=\"owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover\"");
+
+WriteLiteral(" id=\"thumbGalleryDetail\"");
+
+WriteLiteral(">\r\n");
+
+            
+            #line 118 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                
+            
+            #line default
+            #line hidden
+            
+            #line 118 "C:\Inetpub\vhosts\temizliksektoru.istanbul\httpdocs\Views\_Partial\_HaberPopupAyinEniyiTemizlikSirketi.cshtml"
+                                                                 if (Model.KurumResim.Count() > 0)
+                                                                {
+                                                                    foreach (var resim in Model.KurumResim.Where(r => r.ResimTipi == 1))
+                                                                    {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                                                                        <div");
+
+WriteLiteral(" class=\"image-gallery-item\"");
+
+WriteLiteral(">\r\n                                                                            <s" +
+"pan");
+
+WriteLiteral(" class=\"thumb-info thumb-info-lighten\"");
+
+WriteLiteral(">\r\n                                                                              " +
+"  <span");
+
+WriteLiteral(" class=\"thumb-info-wrapper\"");
+
+WriteLiteral(">\r\n                                                         

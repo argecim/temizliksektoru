@@ -1,0 +1,27 @@
+b - CCommandThread::CommandThreadProcedureStub
+2017-09-09 03:10:19, Info                  DISM   API: PID=29736 TID=28728 CommandThread StartupEvent signaled - CCommandThread::WaitForStartup
+2017-09-09 03:10:19, Info                  DISM   API: PID=29736 TID=28728 m_pInternalThread started - CCommandThread::Start
+2017-09-09 03:10:19, Info                  DISM   API: PID=29736 TID=28728 Created g_internalDismSession - DismInitializeInternal
+2017-09-09 03:10:19, Info                  DISM   API: PID=29736 TID=28728 Leave DismInitializeInternal - DismInitializeInternal
+2017-09-09 03:10:19, Info                  DISM   API: PID=29736 TID=23660 Enter CCommandThread::ExecuteLoop - CCommandThread::ExecuteLoop
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Enter DismShutdownInternal - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 GetReferenceCount hr: 0x0 - CSessionTable::RemoveSession
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Refcount for DismSession= 1s 0 - CSessionTable::RemoveSession
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Successfully enqueued command object - CCommandThread::EnqueueCommandObject
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=23660 ExecuteLoop: CommandQueue signaled - CCommandThread::ExecuteLoop
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=23660 Successfully dequeued command object - CCommandThread::DequeueCommandObject
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=23660 ExecuteLoop: Cancel signaled - CCommandThread::ExecuteLoop
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=23660 Leave CCommandThread::ExecuteLoop - CCommandThread::ExecuteLoop
+2017-09-09 03:11:16, Info                  DISM   PID=29736 TID=23660 Temporarily setting the scratch directory. This may be overridden by user later. - CDISMManager::FinalConstruct
+2017-09-09 03:11:16, Info                  DISM   PID=29736 TID=23660 Scratch directory set to 'C:\Windows\TEMP\'. - CDISMManager::put_ScratchDir
+2017-09-09 03:11:16, Info                  DISM   PID=29736 TID=23660 DismCore.dll version: 6.3.9600.17031 - CDISMManager::FinalConstruct
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=23660 Leave CCommandThread::CommandThreadProcedureStub - CCommandThread::CommandThreadProcedureStub
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Deleted g_internalDismSession - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Shutdown SessionTable - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 Leave DismShutdownInternal - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 DismApi.dll:                                          - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 DismApi.dll: <----- Ending DismApi.dll session -----> - DismShutdownInternal
+2017-09-09 03:11:16, Info                  DISM   API: PID=29736 TID=17740 DismApi.dll:                                          - DismShutdownInternal
+2017-09-09 03:20:31, Info                  DISM   API: PID=18496 TID=27944 DismApi.dll:                                            - DismInitializeInternal
+2017-09-09 03:20:31, Info                  DISM   API: PID=18496 TID=27944 DismApi.dll: <----- Starting DismApi.dll session -----> - DismInitializeInternal
+2017-09-09 03:20:31, Info                  DISM   API: PID=18496 TID=27944 DismApi.dll:                   

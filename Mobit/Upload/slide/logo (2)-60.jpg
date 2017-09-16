@@ -1,0 +1,89 @@
+﻿/t:library /utf8output /nostdlib+ /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\7a786fa2\0064b70d_c06acd01\Microsoft.Web.Infrastructure.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.WorkflowServices\v4.0_4.0.0.0__31bf3856ad364e35\System.WorkflowServices.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\2fa6c1c0\00b08176_74a7d001\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\218506fe\00e155da_ef12d101\Microsoft.AI.Web.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\1f89ecf1\d1674fa9_0129d301\App_global.asax.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\bf042c51\00f7e332_68bece01\PagedList.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\609ade5c\8e8d6f98_cad1d201\CKFinder.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\a935323b\00fb1519_143bd001\System.Web.WebPages.Razor.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\423ac6c1\006168ca_133bd001\System.Web.Mvc.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\d2957040\00fb1519_143bd001\System.Web.WebPages.Deployment.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\1a6f833a\009cc0d2_133bd001\System.Web.Razor.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\bad9f078\00118760_3055d001\EntityFramework.SqlServer.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.DataSetExtensions\v4.0_4.0.0.0__b77a5c561934e089\System.Data.DataSetExtensions.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\af8b91ad\001cdb13_f112d101\Microsoft.AI.PerfCounterCollector.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Web\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Web.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.CSharp\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.CSharp.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\acf40fbf\0066a34b_3d11ce01\Antlr3.Runtime.dll" /R:"C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\87423e28\0066ed40_da13cc01\Elmah.dll" /R:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\cd9aac74\75dfd13f\assembly\dl3\0<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="AWStats 7.5 (build 20160301) from config file awstats.dis34.com.conf (http://www.awstats.org)">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="description" content="Awstats - Advanced Web Statistics for dis34.com (2017-09) - refererse">
+<title>Statistics for dis34.com (2017-09) - refererse</title>
+<style type="text/css">
+body { font: 11px verdana, arial, helvetica, sans-serif; background-color: #FFFFFF; margin-top: 0; margin-bottom: 0; }
+.aws_bodyl  { }
+.aws_border { border-collapse: collapse; background-color: #CCCCDD; padding: 1px 1px 1px 1px; margin-top: 0px; margin-bottom: 0px; }
+.aws_title  { font: 13px verdana, arial, helvetica, sans-serif; font-weight: bold; background-color: #CCCCDD; text-align: center; margin-top: 0; margin-bottom: 0; padding: 1px 1px 1px 1px; color: #000000; }
+.aws_blank  { font: 13px verdana, arial, helvetica, sans-serif; background-color: #FFFFFF; text-align: center; margin-bottom: 0; padding: 1px 1px 1px 1px; }
+.aws_data {
+	background-color: #FFFFFF;
+	border-top-width: 1px;   
+	border-left-width: 0px;  
+	border-right-width: 0px; 
+	border-bottom-width: 0px;
+}
+.aws_formfield { font: 13px verdana, arial, helvetica; }
+.aws_button {
+	font-family: arial,verdana,helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid #ccd7e0;
+	background-image : url(AWStats/icon/other/button.gif);
+}
+th		{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; padding: 1px 2px 1px 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:center; color: #000000; }
+th.aws	{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; padding: 1px 2px 1px 1px; font-size: 13px; font-weight: bold; }
+td		{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:center; color: #000000; }
+td.aws	{ border-color: #ECECEC; border-left-width: 0px; border-right-width: 1px; border-top-width: 0px; border-bottom-width: 1px; font: 11px verdana, arial, helvetica, sans-serif; text-align:left; color: #000000; padding: 0px;}
+td.awsm	{ border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; font: 11px verdana, arial, helvetica, sans-serif; text-align:left; color: #000000; padding: 0px; }
+b { font-weight: bold; }
+a { font: 11px verdana, arial, helvetica, sans-serif; }
+a:link    { color: #0011BB; text-decoration: none; }
+a:visited { color: #0011BB; text-decoration: none; }
+a:hover   { color: #605040; text-decoration: underline; }
+.currentday { font-weight: bold; }
+</style>
+</head>
+
+<body style="margin-top: 0px">
+<a name="top"></a>
+
+
+
+<a name="menu">&nbsp;</a>
+<form name="FormDateFilter" action="AWStats/cgi-bin/awstats.pl?config=dis34.com&amp;output=refererse" style="padding: 0px 0px 20px 0px; margin-top: 0">
+<table class="aws_border" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td>
+<table class="aws_data sortable" border="0" cellpadding="1" cellspacing="0" width="100%">
+<tr><td class="aws" valign="middle"><b>Statistics for:</b>&nbsp;</td><td class="aws" valign="middle"><span style="font-size: 14px;">dis34.com</span></td><td align="right" rowspan="3"><a href="http://www.awstats.org" target="awstatshome"><img src="AWStats/icon/other/awstats_logo6.png" border="0" alt='Awstats Web Site' title='Awstats Web Site' /></a><br /></td></tr>
+<tr valign="middle"><td class="aws" valign="middle" width="150"><b>Last Update:</b>&nbsp;</td><td class="aws" valign="middle"><span style="font-size: 12px;">09 Sep 2017 - 03:32</span></td></tr>
+<tr><td class="aws" valign="middle"><b>Reported period:</b></td><td class="aws" valign="middle"><select class="aws_formfield" name="month">
+<option value="01">Jan</option>
+<option value="02">Feb</option>
+<option value="03">Mar</option>
+<option value="04">Apr</option>
+<option value="05">May</option>
+<option value="06">Jun</option>
+<option value="07">Jul</option>
+<option value="08">Aug</option>
+<option selected="selected" value="09">Sep</option>
+<option value="10">Oct</option>
+<option value="11">Nov</option>
+<option value="12">Dec</option>
+<option value="all">- Year -</option>
+</select>
+<select class="aws_formfield" name="year">
+<option selected="selected" value="2017">2017</option>
+</select>
+<input type="hidden" name="output" value="refererse" />
+<input type="hidden" name="config" value="dis34.com" />
+<input type="submit" value=" OK " class="aws_button" /></td></tr>
+</table>
+</td></tr></table>
+</form><br />
+
+<table>
+<tr><td class="aws"><a href="javascript:parent.window.close();">Close window</a></td></tr>
+</table>
+
+<a name="refererse">&nbsp;</a><br />
+<table class="aws_border sortable" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td class="aws_title" width="70%">Links from an Internet Search Engine </td><td class="aws_blank">&nbsp;</td></tr>
+<tr><td colspan="2">
+<table class="aws_data" border="1" cellpadding="2" cellspacing="0" width="100%">
+<tr bgcolor="#ECECEC"><th>2 different referring search engines</th><th bgcolor="#4477DD" width="80">Pages</th><th bgcolor="#4477DD" width="80">Percent</th><th bgcolor="#66DDEE" width="80">Hits</th><th bgcolor="#66DDEE" width="80">Percent</th></t
