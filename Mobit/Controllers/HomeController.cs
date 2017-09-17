@@ -369,7 +369,7 @@ namespace Mobit.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[Route("Arama")]
+        [Route("Arama")]
         public ActionResult Arama(GelismisAramaModel arama, int? Sayfa)
         {
 
@@ -387,6 +387,10 @@ namespace Mobit.Controllers
             else if (arama.KategoriId != 0 && arama.ilId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {
                 kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId && k.ilId == arama.ilId && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
+            }
+            else if (arama.KategoriId != 0 && arama.AltKategoriId != 0 && string.IsNullOrEmpty(arama.SearchKey))
+            {
+                kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId &&  k.AltKategoriId== arama.AltKategoriId && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
             }
             else if (arama.KategoriId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {

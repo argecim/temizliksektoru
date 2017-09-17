@@ -29,10 +29,10 @@
 
 
         @*A1 reklam alanı*@
-        <div class="row" style="padding-left:7px;padding-right:7px;margin-top:-20px">
+        <div class="row" style="padding-left:7px;padding-right:7px;">
             @foreach (var item in Model.Slider.Where(s => s.SliderId == 4).Take(1).OrderBy(s => s.Sira))
             {
-                <div class="col-md-12" style="padding:7px;margin-top:-20px">
+                <div class="col-md-12" style="padding:7px;margin-top:-19px">
                     <a href="@item.Url" target="@item.Target">
                         <span class="thumb-info thumb-info-lighten">
                             <span class="thumb-info-wrapper">
@@ -45,10 +45,10 @@
         </div>
 
         @*A2 A-B reklam alanı*@
-        <div class="row" style="padding-left:7px;padding-right:7px;padding-top:20px;">
+        <div class="row" style="padding-left:7px;padding-right:7px;">
             @foreach (var item in Model.Slider.Where(s => s.SliderId == 5).Take(2).OrderBy(s => s.Sira))
             {
-                <div class="col-md-6" style="padding:7px;margin-top:-19px;">
+                <div class="col-md-6" style="padding:7px;">
                     <a href="@item.Url" target="@item.Target">
                         <span class="thumb-info thumb-info-lighten">
                             <span class="thumb-info-wrapper">
@@ -97,7 +97,7 @@
         </div>
 
     </div>
-    <div class="col-md-12 HaberlerPasif" style="height:32px;background-color:red;vertical-align:bottom;color:white;margin-top:-20px;padding-top:-10px">
+    <div class="col-md-12 HaberlerPasif" style="height:32px;background-color:red;vertical-align:bottom;color:white;margin-top:-28px;padding-top:-10px">
         <div class="col-md-2 SourcePasif"><h4><strong style="background-color:red;vertical-align:bottom;color:white;font-size:18px;">HABERLER</strong></h4></div>
         <div class="col-md-10" style="vertical-align:bottom;text-align:justify;">
             <marquee direction=left>

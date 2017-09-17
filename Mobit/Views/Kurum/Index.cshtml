@@ -278,7 +278,14 @@
                                                 <div class="image-gallery-item">
                                                     <span class="thumb-info thumb-info-lighten">
                                                         <span class="thumb-info-wrapper">
-                                                            <img src="~/Upload/kurum/@Model.Kurumlar.UploadYolu/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
+                                                                @if (@Model.Kurumlar.Sponsorlar != null)
+                                                                {
+                                                                <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
+                                                                }
+                                                                else
+                                                                {
+                                                                <img src="~/Upload/kurum/@Model.Kurumlar.UploadYolu/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
+                                                                }
                                                             <span class="thumb-info-title">
                                                                 <span class="thumb-info-inner">@resim.Aciklama</span>
                                                                 <span class="thumb-info-type">@resim.Kurumlar.KurumAdi</span>
@@ -298,7 +305,14 @@
                                                 <div class="image-gallery-item">
                                                     <span class="thumb-info thumb-info-lighten">
                                                         <span class="thumb-info-wrapper">
-                                                            <img src="~/Upload/kurum/@Model.Kurumlar.UploadYolu/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="height:175px;">
+                                                                @if (@Model.Kurumlar.Sponsorlar != null)
+                                                                {
+                                                                    <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="height:175px;">
+                                                                }
+                                                                else
+                                                                {
+                                                                    <img src="~/Upload/kurum/@Model.Kurumlar.UploadYolu/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="height:175px;">
+                                                                }
                                                             <span class="thumb-info-title">
                                                                 <span class="thumb-info-inner" style="font-size:12px;">@resim.Aciklama</span>
                                                             </span>

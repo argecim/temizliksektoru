@@ -1,9 +1,9 @@
 ﻿<script src="~/Content/slider/js/jquery-1.9.1.min.js"></script>
 <script src="~/Content/slider/js/jssor.slider.min.js"></script>
 <script type="text/javascript">
-    jssor_haberlerHaberPopupSponsor1_slider_init = function () {
+    jssor_haberlerSponsor1_slider_init = function () {
 
-        var jssor_haberlerHaberPopupSponsor1_SlideshowTransitions = [
+        var jssor_haberlerSponsor1_SlideshowTransitions = [
             { $Duration: 1200, $Zoom: 1, $Easing: { $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad }, $Opacity: 2 },
             { $Duration: 1000, $Zoom: 11, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
             { $Duration: 1200, $Zoom: 1, $Rotate: 1, $During: { $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Easing: { $Zoom: $Jease$.$Swing, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$Swing }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
@@ -20,11 +20,11 @@
             { $Duration: 1200, x: 1, y: 2, $Cols: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 19 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } }
         ];
 
-        var jssor_haberlerHaberPopupSponsor1_options = {
+        var jssor_haberlerSponsor1_options = {
             $AutoPlay: 1,
             $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_haberlerHaberPopupSponsor1_SlideshowTransitions,
+                $Transitions: jssor_haberlerSponsor1_SlideshowTransitions,
                 $TransitionsOrder: 1
             },
             $ArrowNavigatorOptions: {
@@ -41,21 +41,21 @@
             }
         };
 
-        var jssor_haberlerHaberPopupSponsor1_slider = new $JssorSlider$("jssor_haberlerHaberPopupSponsor1", jssor_haberlerHaberPopupSponsor1_options);
+        var jssor_haberlerSponsor1_slider = new $JssorSlider$("jssor_haberlerSponsor1", jssor_haberlerSponsor1_options);
 
         /*#region responsive code begin*/
 
         var MAX_WIDTH = 960;
 
         function ScaleSlider() {
-            var containerElement = jssor_haberlerHaberPopupSponsor1_slider.$Elmt.parentNode;
+            var containerElement = jssor_haberlerSponsor1_slider.$Elmt.parentNode;
             var containerWidth = containerElement.clientWidth;
 
             if (containerWidth) {
 
                 var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-                jssor_haberlerHaberPopupSponsor1_slider.$ScaleWidth(expectedWidth);
+                jssor_haberlerSponsor1_slider.$ScaleWidth(expectedWidth);
             }
             else {
                 window.setTimeout(ScaleSlider, 30);
@@ -70,9 +70,9 @@
         /*#endregion responsive code end*/
     };
 
-    jssor_slaytHaberPopupSponsor1_slider_init = function () {
+    jssor_slaytSponsor1_slider_init = function () {
 
-        var jssor_slaytHaberPopupSponsor1_SlideshowTransitions = [
+        var jssor_slaytSponsor1_SlideshowTransitions = [
             { $Duration: 1200, $Zoom: 1, $Easing: { $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad }, $Opacity: 2 },
             { $Duration: 1000, $Zoom: 11, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
             { $Duration: 1200, $Zoom: 1, $Rotate: 1, $During: { $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Easing: { $Zoom: $Jease$.$Swing, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$Swing }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
@@ -89,11 +89,11 @@
             { $Duration: 1200, x: 1, y: 2, $Cols: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 19 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } }
         ];
 
-        var jssor_slaytHaberPopupSponsor1_options = {
+        var jssor_slaytSponsor1_options = {
             $AutoPlay: 1,
             $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_slaytHaberPopupSponsor1_SlideshowTransitions,
+                $Transitions: jssor_slaytSponsor1_SlideshowTransitions,
                 $TransitionsOrder: 1
             },
             $ArrowNavigatorOptions: {
@@ -110,21 +110,21 @@
             }
         };
 
-        var jssor_slaytHaberPopupSponsor1_slider = new $JssorSlider$("jssor_slaytHaberPopupSponsor1", jssor_slaytHaberPopupSponsor1_options);
+        var jssor_slaytSponsor1_slider = new $JssorSlider$("jssor_slaytSponsor1", jssor_slaytSponsor1_options);
 
         /*#region responsive code begin*/
 
         var MAX_WIDTH = 960;
 
         function ScaleSlider() {
-            var containerElement = jssor_slaytHaberPopupSponsor1_slider.$Elmt.parentNode;
+            var containerElement = jssor_slaytSponsor1_slider.$Elmt.parentNode;
             var containerWidth = containerElement.clientWidth;
 
             if (containerWidth) {
 
                 var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-                jssor_slaytHaberPopupSponsor1_slider.$ScaleWidth(expectedWidth);
+                jssor_slaytSponsor1_slider.$ScaleWidth(expectedWidth);
             }
             else {
                 window.setTimeout(ScaleSlider, 30);
@@ -139,9 +139,9 @@
         /*#endregion responsive code end*/
     };
 
-    jssor_aktivitelerHaberPopupSponsor1_slider_init = function () {
+    jssor_aktivitelerSponsor1_slider_init = function () {
 
-        var jssor_aktivitelerHaberPopupSponsor1_SlideshowTransitions = [
+        var jssor_aktivitelerSponsor1_SlideshowTransitions = [
             { $Duration: 1200, $Zoom: 1, $Easing: { $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad }, $Opacity: 2 },
             { $Duration: 1000, $Zoom: 11, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
             { $Duration: 1200, $Zoom: 1, $Rotate: 1, $During: { $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Easing: { $Zoom: $Jease$.$Swing, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$Swing }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
@@ -158,11 +158,11 @@
             { $Duration: 1200, x: 1, y: 2, $Cols: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 19 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } }
         ];
 
-        var jssor_aktivitelerHaberPopupSponsor1_options = {
+        var jssor_aktivitelerSponsor1_options = {
             $AutoPlay: 1,
             $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_aktivitelerHaberPopupSponsor1_SlideshowTransitions,
+                $Transitions: jssor_aktivitelerSponsor1_SlideshowTransitions,
                 $TransitionsOrder: 1
             },
             $ArrowNavigatorOptions: {
@@ -179,21 +179,21 @@
             }
         };
 
-        var jssor_aktivitelerHaberPopupSponsor1_slider = new $JssorSlider$("jssor_aktivitelerHaberPopupSponsor1", jssor_aktivitelerHaberPopupSponsor1_options);
+        var jssor_aktivitelerSponsor1_slider = new $JssorSlider$("jssor_aktivitelerSponsor1", jssor_aktivitelerSponsor1_options);
 
         /*#region responsive code begin*/
 
         var MAX_WIDTH = 960;
 
         function ScaleSlider() {
-            var containerElement = jssor_aktivitelerHaberPopupSponsor1_slider.$Elmt.parentNode;
+            var containerElement = jssor_aktivitelerSponsor1_slider.$Elmt.parentNode;
             var containerWidth = containerElement.clientWidth;
 
             if (containerWidth) {
 
                 var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-                jssor_aktivitelerHaberPopupSponsor1_slider.$ScaleWidth(expectedWidth);
+                jssor_aktivitelerSponsor1_slider.$ScaleWidth(expectedWidth);
             }
             else {
                 window.setTimeout(ScaleSlider, 30);
@@ -208,9 +208,9 @@
         /*#endregion responsive code end*/
     };
 
-    jssor_ResimlerHaberPopupSponsor1_slider_init = function () {
+    jssor_ResimlerSponsor1_slider_init = function () {
 
-        var jssor_ResimlerHaberPopupSponsor1_SlideshowTransitions = [
+        var jssor_ResimlerSponsor1_SlideshowTransitions = [
             { $Duration: 1200, $Zoom: 1, $Easing: { $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad }, $Opacity: 2 },
             { $Duration: 1000, $Zoom: 11, $SlideOut: true, $Easing: { $Zoom: $Jease$.$InExpo, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
             { $Duration: 1200, $Zoom: 1, $Rotate: 1, $During: { $Zoom: [0.2, 0.8], $Rotate: [0.2, 0.8] }, $Easing: { $Zoom: $Jease$.$Swing, $Opacity: $Jease$.$Linear, $Rotate: $Jease$.$Swing }, $Opacity: 2, $Round: { $Rotate: 0.5 } },
@@ -227,11 +227,11 @@
             { $Duration: 1200, x: 1, y: 2, $Cols: 2, $Zoom: 11, $Rotate: 1, $Assembly: 2049, $ChessMode: { $Column: 19 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Zoom: $Jease$.$InCubic, $Opacity: $Jease$.$OutQuad, $Rotate: $Jease$.$InCubic }, $Opacity: 2, $Round: { $Rotate: 0.8 } }
         ];
 
-        var jssor_ResimlerHaberPopupSponsor1_options = {
+        var jssor_ResimlerSponsor1_options = {
             $AutoPlay: 1,
             $SlideshowOptions: {
                 $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_ResimlerHaberPopupSponsor1_SlideshowTransitions,
+                $Transitions: jssor_ResimlerSponsor1_SlideshowTransitions,
                 $TransitionsOrder: 1
             },
             $ArrowNavigatorOptions: {
@@ -248,21 +248,21 @@
             }
         };
 
-        var jssor_ResimlerHaberPopupSponsor1_slider = new $JssorSlider$("jssor_ResimlerHaberPopupSponsor1", jssor_ResimlerHaberPopupSponsor1_options);
+        var jssor_ResimlerSponsor1_slider = new $JssorSlider$("jssor_ResimlerSponsor1", jssor_ResimlerSponsor1_options);
 
         /*#region responsive code begin*/
 
         var MAX_WIDTH = 960;
 
         function ScaleSlider() {
-            var containerElement = jssor_ResimlerHaberPopupSponsor1_slider.$Elmt.parentNode;
+            var containerElement = jssor_ResimlerSponsor1_slider.$Elmt.parentNode;
             var containerWidth = containerElement.clientWidth;
 
             if (containerWidth) {
 
                 var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-                jssor_ResimlerHaberPopupSponsor1_slider.$ScaleWidth(expectedWidth);
+                jssor_ResimlerSponsor1_slider.$ScaleWidth(expectedWidth);
             }
             else {
                 window.setTimeout(ScaleSlider, 30);
@@ -339,7 +339,7 @@
         top: 0;
         left: 0;
         box-sizing: border-box;
-        background: #000;
+        background: #fff;
     }
 
         .jssort101 .p .cv {
@@ -409,296 +409,304 @@
     }
 </style>
 
-<div class="container-fluid">
+<div class="container-fluid" style="background-color:aliceblue;">
+    <br />
     @{
         Mobit.Data.Context.Entities db = new Mobit.Data.Context.Entities();
         foreach (var Model in db.Kurumlar.Where(h => h.Sponsorlar == "Sponsor1").Take(1).ToList())
         {
-
             <div class="col-md-12">
                 <div class="row" style="background-color: #FFFFFF;">
-                    <div class="col-md-10">
-                        <span style="font-size:40px;vertical-align:center;text-align: center;" class="heading-primary">@Model.KurumAdi</span>
+                    <div class="col-md-3">
+                        <img data-u="image" src="~/Upload/slide/@Model.Resim" alt="@Model.KurumAdi" title="@Model.KurumAdi" style="width:100px;height:50px;" />
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        <span style="font-size:40px;vertical-align:middle;text-align: center;" class="heading-primary">@Model.KurumAdi</span>
+                    </div>
+                    <div class="col-md-1">
+
                     </div>
                     <div class="col-md-2">
+                        <br />
                         <button type="button" class="btn btn-default" data-dismiss="modal">KAPAT</button><br />
                     </div>
                 </div>
             </div>
-
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="tabs tabs-tertiary tabs-center nav-tabs-justified">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#haberlerHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Haberler</a></li>
-                                @if (Model.KurumResim.Where(r => r.ResimTipi == 1 && r.KurumId == Model.KurumId).Count() >= 1)
-                                {
-                                    <li><a href="#slaytHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Tanıtım Slaytları</a></li>
-                                }
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tabs tabs-tertiary tabs-center nav-tabs-justified">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#haberlerSponsor1" data-toggle="tab" style="color:blue;">Haberler</a></li>
+                                        @if (Model.KurumResim.Where(r => r.ResimTipi == 1 && r.KurumId == Model.KurumId).Count() >= 1)
+                                        {
+                                            <li><a href="#slaytSponsor1" data-toggle="tab" style="color:blue;">Tanıtım Slaytları</a></li>
+                                        }
 
-                                @if (Model.KurumResim.Where(r => r.ResimTipi == 4 && r.KurumId == Model.KurumId).Count() >= 1)
-                                {
-                                    <li><a href="#aktivitelerHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Aktiviteler</a></li>
-                                }
-                                @if (Model.Aciklama != null && Model.Aciklama.Length > 10)
-                                {
-                                    <li><a href="#aciklamaHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Hakkında</a></li>
-                                }
-                                @if (Model.Video != null && Model.Video.Length > 20)
-                                {
-                                    <li><a href="#videoHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Tanıtım Videosu</a></li>
+                                        @if (Model.KurumResim.Where(r => r.ResimTipi == 4 && r.KurumId == Model.KurumId).Count() >= 1)
+                                        {
+                                            <li><a href="#aktivitelerSponsor1" data-toggle="tab" style="color:blue;">Aktiviteler</a></li>
+                                        }
+                                        @if (Model.Aciklama != null && Model.Aciklama.Length > 10)
+                                        {
+                                            <li><a href="#aciklamaSponsor1" data-toggle="tab" style="color:blue;">Hakkında</a></li>
+                                        }
+                                        @if (Model.Video != null && Model.Video.Length > 20)
+                                        {
+                                            <li><a href="#videoSponsor1" data-toggle="tab" style="color:blue;">Tanıtım Videosu</a></li>
 
-                                }
-                                @if (Model.Harita != null && Model.Harita.Length > 20)
-                                {
-                                    <li><a href="#haritaHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Harita</a></li>
+                                        }
+                                        @if (Model.Harita != null && Model.Harita.Length > 20)
+                                        {
+                                            <li><a href="#haritaSponsor1" data-toggle="tab" style="color:blue;">Harita</a></li>
 
-                                }
-                                @if (Model.Panoroma != null && Model.Panoroma.Length > 10)
-                                {
-                                    <li><a href="#panoromaHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Panoroma</a></li>
-                                }
-                                @if (Model.D3Boyutlu != null && Model.D3Boyutlu.Length > 10)
-                                {
-                                    <li><a href="#3dHaberPopupSponsor1" data-toggle="tab" style="color:blue;">3D Tanıtım</a></li>
-                                }
-                                <li><a href="#ResimlerHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Resimler</a></li>
-                                <li><a href="#DetaylarHaberPopupSponsor1" data-toggle="tab" style="color:blue;">Detaylar</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="haberlerHaberPopupSponsor1">
-                                    <div id="jssor_haberlerHaberPopupSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-                                        <!-- Loading Screen -->
-                                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
-                                        </div>
-                                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
-                                            @foreach (var resim in db.Haberler.Where(r => r.KategoriId == 5).OrderByDescending(u => u.Id))
-                                            {
-                                                <div>
-                                                    <img data-u="image" src="~/Upload/haber/@resim.Resim" alt="@resim.Ad" title="@resim.Ad" />
-                                                    <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Ad)</div>
-                                                    <img data-u="thumb" src="~/Upload/haber/@resim.Resim" alt="@resim.Ad" title="@resim.Ad" />
+                                        }
+                                        @if (Model.Panoroma != null && Model.Panoroma.Length > 10)
+                                        {
+                                            <li><a href="#panoromaSponsor1" data-toggle="tab" style="color:blue;">Panoroma</a></li>
+                                        }
+                                        @if (Model.D3Boyutlu != null && Model.D3Boyutlu.Length > 10)
+                                        {
+                                            <li><a href="#3dSponsor1" data-toggle="tab" style="color:blue;">3D Tanıtım</a></li>
+                                        }
+                                        <li><a href="#ResimlerSponsor1" data-toggle="tab" style="color:blue;">Eğitimciler</a></li>
+                                        <li><a href="#DetaylarSponsor1" data-toggle="tab" style="color:blue;">Detaylar</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="haberlerSponsor1">
+                                            <div id="jssor_haberlerSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                                                <!-- Loading Screen -->
+                                                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
                                                 </div>
-                                            }
-                                        </div>
-                                        <!-- Thumbnail Navigator -->
-                                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#fff;" data-autocenter="2" data-scale-left="0.75">
-                                            <div data-u="slides">
-                                                <div data-u="prototype" class="p" style="width:99px;height:66px;">
-                                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                                    <svg viewBox="0 0 16000 16000" class="cv">
-                                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
+                                                    @foreach (var resim in db.Haberler.Where(r => r.KategoriId == 5).OrderByDescending(u => u.Id))
+                                                    {
+                                                        <div style="background-color:#fff;border:solid;border-color:aliceblue;border-width:5px;">
+                                                            @*<img data-u="image" src="~/Upload/haber/@resim.Resim" alt="@resim.Ad" title="@resim.Ad" />*@
+                                                            <div style="position:absolute;top:0px;left:20px ;width:720px;color:#fff;overflow-y: scroll;">@Html.Raw(resim.Detay)</div>
+                                                            <img data-u="thumb" src="~/Upload/haber/@resim.Resim" alt="@resim.Ad" title="@resim.Ad" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <!-- Thumbnail Navigator -->
+                                                <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;width:240px;height:420px;background-color:#FFF;" data-autocenter="2" data-scale-left="0.75">
+                                                    <div data-u="slides">
+                                                        <div data-u="prototype" class="p" style="width:99px;height:66px;">
+                                                            <div data-u="thumbnailtemplate" class="t"></div>
+                                                            <svg viewBox="0 0 16000 16000" class="cv">
+                                                                <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                                                <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                                                <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Arrow Navigator -->
+                                                <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                                                        <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+                                                    </svg>
+                                                </div>
+                                                <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                                                        <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
                                                     </svg>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Arrow Navigator -->
-                                        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-                                                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-                                                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="slaytHaberPopupSponsor1">
-                                    <div id="jssor_slaytHaberPopupSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-                                        <!-- Loading Screen -->
-                                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
-                                        </div>
-                                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
-                                            @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 1 && r.KurumId == Model.KurumId))
-                                            {
-                                                <div>
-                                                    <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
-                                                    <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                    <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                        <div class="tab-pane" id="slaytSponsor1" style="background-color:#FFF;">
+                                            <div id="jssor_slaytSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                                                <!-- Loading Screen -->
+                                                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
                                                 </div>
-                                            }
-                                        </div>
-                                        <!-- Thumbnail Navigator -->
-                                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#fff;" data-autocenter="2" data-scale-left="0.75">
-                                            <div data-u="slides">
-                                                <div data-u="prototype" class="p" style="width:99px;height:66px;">
-                                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                                    <svg viewBox="0 0 16000 16000" class="cv">
-                                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
+                                                    @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 1 && r.KurumId == Model.KurumId))
+                                                    {
+                                                        <div>
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <!-- Thumbnail Navigator -->
+                                                <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:420px;background-color:#FFF;" data-autocenter="2" data-scale-left="0.75">
+                                                    <div data-u="slides">
+                                                        <div data-u="prototype" class="p" style="width:99px;height:66px;">
+                                                            <div data-u="thumbnailtemplate" class="t"></div>
+                                                            <svg viewBox="0 0 16000 16000" class="cv">
+                                                                <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                                                <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                                                <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Arrow Navigator -->
+                                                <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                                                        <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+                                                    </svg>
+                                                </div>
+                                                <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                                                        <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
                                                     </svg>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Arrow Navigator -->
-                                        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-                                                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-                                                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="aktivitelerHaberPopupSponsor1">
-                                    <div id="jssor_aktivitelerHaberPopupSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-                                        <!-- Loading Screen -->
-                                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
-                                        </div>
-                                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
-                                            @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 4 && r.KurumId == Model.KurumId))
-                                            {
-                                                <div>
-                                                    <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
-                                                    <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                    <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                        <div class="tab-pane" id="aktivitelerSponsor1" style="background-color:#FFF;">
+                                            <div id="jssor_aktivitelerSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                                                <!-- Loading Screen -->
+                                                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
                                                 </div>
-                                            }
-                                        </div>
-                                        <!-- Thumbnail Navigator -->
-                                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#fff;" data-autocenter="2" data-scale-left="0.75">
-                                            <div data-u="slides">
-                                                <div data-u="prototype" class="p" style="width:99px;height:66px;">
-                                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                                    <svg viewBox="0 0 16000 16000" class="cv">
-                                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
+                                                    @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 4 && r.KurumId == Model.KurumId))
+                                                    {
+                                                        <div>
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <!-- Thumbnail Navigator -->
+                                                <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:420px;background-color:#FFF;" data-autocenter="2" data-scale-left="0.75">
+                                                    <div data-u="slides">
+                                                        <div data-u="prototype" class="p" style="width:99px;height:66px;">
+                                                            <div data-u="thumbnailtemplate" class="t"></div>
+                                                            <svg viewBox="0 0 16000 16000" class="cv">
+                                                                <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                                                <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                                                <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Arrow Navigator -->
+                                                <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                                                        <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+                                                    </svg>
+                                                </div>
+                                                <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                                                        <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
                                                     </svg>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Arrow Navigator -->
-                                        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-                                                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-                                            </svg>
+                                        <div class="tab-pane" id="aciklamaSponsor1" style="background-color:#FFF;">
+                                            <p>
+                                                @Html.Raw(Model.Aciklama)
+                                            </p>
                                         </div>
-                                        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-                                                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="aciklamaHaberPopupSponsor1">
-                                    <p>
-                                        @Html.Raw(Model.Aciklama)
-                                    </p>
-                                </div>
-                                <div class="tab-pane" id="videoHaberPopupSponsor1">
-                                    @*<iframe src='@Html.Raw(Model.Video)' width='100%' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>*@
-                                    @if (Model.Video != null && Model.Video.Contains("iframe"))
-                                    {
-                                        @Html.Raw(Model.Video)
-                                    }
-                                    else
-                                    {
-                                        <iframe src="@Html.Raw(Model.Video)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    }
-                                </div>
-                                <div class="tab-pane" id="haritaHaberPopupSponsor1">
-                                    @if (Model.Harita != null && Model.Video.Contains("iframe"))
-                                    {
-                                        @Html.Raw(Model.Harita)
-                                    }
-                                    else
-                                    {
-                                        <iframe src="@Html.Raw(Model.Harita)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    }
-                                </div>
-                                <div class="tab-pane" id="3dHaberPopupSponsor1">
-                                    @if (Model.D3Boyutlu != null && Model.D3Boyutlu.Contains("iframe"))
-                                    {
-                                        @Html.Raw(Model.D3Boyutlu)
-                                    }
-                                    else
-                                    {
-                                        <iframe src="@Html.Raw(Model.D3Boyutlu)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    }
-                                </div>
-                                <div class="tab-pane" id="panoromaHaberPopupSponsor1">
-                                    @if (Model.Panoroma != null && Model.Panoroma.Contains("iframe"))
-                                    {
-                                        @Html.Raw(Model.Panoroma)
-                                    }
-                                    else
-                                    {
-                                        <iframe src="@Html.Raw(Model.Panoroma)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    }
-                                </div>
-                                <div class="tab-pane" id="ResimlerHaberPopupSponsor1">
-                                    <div id="jssor_ResimlerHaberPopupSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:480px;overflow:hidden;visibility:hidden;background-color:#24262e;">
-                                        <!-- Loading Screen -->
-                                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
-                                        </div>
-                                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:480px;overflow:hidden;">
-                                            @foreach (var resim in db.KurumEgitimciler.Where(r => r.Tip == 1 && r.KurumId == Model.KurumId))
+                                        <div class="tab-pane" id="videoSponsor1" style="background-color:#FFF;">
+                                            @if (Model.Video != null && Model.Video.Contains("iframe"))
                                             {
-                                                <div>
-                                                    <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
-                                                    <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                    <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
-                                                </div>
+                                                @Html.Raw(Model.Video)
+                                            }
+                                            else
+                                            {
+                                                <iframe src="@Html.Raw(Model.Video)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                             }
                                         </div>
-                                        <!-- Thumbnail Navigator -->
-                                        <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:480px;background-color:#fff;" data-autocenter="2" data-scale-left="0.75">
-                                            <div data-u="slides">
-                                                <div data-u="prototype" class="p" style="width:99px;height:66px;">
-                                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                                    <svg viewBox="0 0 16000 16000" class="cv">
-                                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                        <div class="tab-pane" id="haritaSponsor1" style="background-color:#FFF;">
+                                            @if (Model.Harita != null && Model.Harita.Contains("iframe"))
+                                            {
+                                                @Html.Raw(Model.Harita)
+                                            }
+                                            else
+                                            {
+                                                <iframe src="@Html.Raw(Model.Harita)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            }
+                                        </div>
+                                        <div class="tab-pane" id="3dSponsor1" style="background-color:#FFF;">
+                                            @if (Model.D3Boyutlu != null && Model.D3Boyutlu.Contains("iframe"))
+                                            {
+                                                @Html.Raw(Model.D3Boyutlu)
+                                            }
+                                            else
+                                            {
+                                                <iframe src="@Html.Raw(Model.D3Boyutlu)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            }
+                                        </div>
+                                        <div class="tab-pane" id="panoromaSponsor1" style="background-color:#FFF;">
+                                            @if (Model.Panoroma != null && Model.Panoroma.Contains("iframe"))
+                                            {
+                                                @Html.Raw(Model.Panoroma)
+                                            }
+                                            else
+                                            {
+                                                <iframe src="@Html.Raw(Model.Panoroma)" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            }
+                                        </div>
+                                        <div class="tab-pane" id="ResimlerSponsor1" style="background-color:#FFF;">
+                                            <div id="jssor_ResimlerSponsor1" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+                                                <!-- Loading Screen -->
+                                                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
+                                                </div>
+                                                <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
+                                                    @foreach (var resim in db.KurumEgitimciler.Where(r => r.Tip == 1 && r.KurumId == Model.KurumId))
+                                                    {
+                                                        <div>
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <!-- Thumbnail Navigator -->
+                                                <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;top:0px;width:240px;height:420px;background-color:#FFF;" data-autocenter="2" data-scale-left="0.75">
+                                                    <div data-u="slides">
+                                                        <div data-u="prototype" class="p" style="width:99px;height:66px;">
+                                                            <div data-u="thumbnailtemplate" class="t"></div>
+                                                            <svg viewBox="0 0 16000 16000" class="cv">
+                                                                <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                                                <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                                                <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Arrow Navigator -->
+                                                <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+                                                        <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+                                                    </svg>
+                                                </div>
+                                                <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
+                                                    <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                                        <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+                                                        <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+                                                        <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
                                                     </svg>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Arrow Navigator -->
-                                        <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:270px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-                                                <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                        <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2">
-                                            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                                <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-                                                <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-                                                <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="DetaylarHaberPopupSponsor1">
-                                    <dl>
+                                        <div class="tab-pane" id="DetaylarSponsor1" style="background-color:#FFF;">
+                                            <dl>
                                         @if (Model.Adres != null)
                                         {
                                             <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">ADRESİ :</span></dt>
@@ -709,7 +717,12 @@
                                         {
                                             <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">TELEFON NO :</span></dt>
                                             <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Tel</span></dd>
-                                        }
+                                                }
+                                                @if (Model.WebSitesi != null)
+                                                {
+                                                    <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">WEB SİTESİ :</span></dt>
+                                                    <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;"><a href="@Model.WebSitesi" target="_blank">@Model.WebSitesi</a></span></dd>
+                                                }
                                         @if (Model.Subeler != null)
                                         {
                                             <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">ŞUBELER :</span></dt>
@@ -759,15 +772,20 @@
 
 
 
-                                    </dl>
+                                            </dl>
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
+
             </div>
+
         }
 
     }
@@ -779,8 +797,8 @@
 </div>
 
 <script type="text/javascript">
-    jssor_haberlerHaberPopupSponsor1_slider_init();
-    jssor_slaytHaberPopupSponsor1_slider_init();
-    jssor_aktivitelerHaberPopupSponsor1_slider_init();
-    jssor_ResimlerHaberPopupSponsor1_slider_init();
+    jssor_haberlerSponsor1_slider_init();
+    jssor_slaytSponsor1_slider_init();
+    jssor_aktivitelerSponsor1_slider_init();
+    jssor_ResimlerSponsor1_slider_init();
 </script>

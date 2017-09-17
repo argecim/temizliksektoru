@@ -23,8 +23,7 @@ namespace Mobit.Controllers
             {
                 return Redirect("/");
             }
-
-            if (model.Kurumlar.Kategoriler != null)
+            if (model.Kurumlar.Kategoriler!=null)
             {
                 ViewBag.title = model.Kurumlar.KurumAdi + " - " + model.Kurumlar.Kategoriler.KategoriAdi;
                 ViewBag.desc = model.Kurumlar.Kategoriler.KategoriAdi + " - " + model.Kurumlar.KurumAdi;

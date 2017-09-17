@@ -37,7 +37,7 @@ namespace Mobit.Areas.Admin.Controllers
 
             if (!Directory.Exists(folder))
             {
-                //Directory.CreateDirectory(folder);
+                Directory.CreateDirectory(folder);
             }
 
             galeri.GaleriYolu = folderName;

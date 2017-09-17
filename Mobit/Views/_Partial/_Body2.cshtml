@@ -13,7 +13,7 @@
                 </div>
                 <aside class="sidebar">
                     <ul class="simple-post-list">
-                        @foreach (var haberler in item.Haberler.OrderByDescending(h => h.Id).Take(16))
+                        @foreach (var haberler in item.Haberler.OrderByDescending(h => h.Id).Take(17))
                         {
                             <li style="margin:0px;padding:0px;height:162px;font-size:12px;font-family: Arial, sans-serif;">
                                 <div class="post-image">
@@ -52,8 +52,7 @@
     <div class="col-md-4" style="padding:7px;">
         <aside class="sidebar">
             <div class="heading heading-primary heading-border heading-bottom-border">
-                <br />
-                <h3 class="heading-primary">EN İYİ TEMİZLİK ŞİRKETLERİ</h3>
+                <h2 class="heading-primary">EN İYİ TEMİZLİK ŞİRKETLERİ</h2>
             </div>
             <div class="owl-carousel owl-theme show-nav-hover" data-plugin-options='{"items": 3, "margin": 1, "loop": true, "nav": true, "dots": false,"autoplay": true, "autoplayTimeout": 2000}'>
                 @{
@@ -84,7 +83,7 @@
 
 
             <div class="heading heading-primary heading-border heading-bottom-border" style="padding-top:-50px">
-                <h2 class="heading-primary">En İyi Ürünler</h2>
+                <h3 class="heading-primary">En İyi Ürünler</h3>
             </div>
             <div class="owl-carousel owl-theme show-nav-hover" data-plugin-options='{"items": 3, "margin": 2, "loop": true, "nav": true, "dots": false,"autoplay": true, "autoplayTimeout": 2000}'>
                 @{
@@ -111,7 +110,7 @@
 
 
             <div class="heading heading-primary heading-border heading-bottom-border" style="padding-top:-50px">
-                <h2 class="heading-primary">En İyi Tedarikçiler</h2>
+                <h3 class="heading-primary">En İyi Tedarikçiler</h3>
             </div>
             <div class="owl-carousel owl-theme show-nav-hover" data-plugin-options='{"items": 3, "margin": 2, "loop": true, "nav": true, "dots": false,"autoplay": true, "autoplayTimeout": 2000}'>
                 @{

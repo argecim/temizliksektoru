@@ -39,7 +39,7 @@ namespace Mobit.Controllers
         }
 
 
-        //[Route("Haberler")]
+        [Route("Haberler")]
         public ActionResult Haberler(int? Sayfa)
         {
 
@@ -65,24 +65,24 @@ namespace Mobit.Controllers
         }
 
 
-        //[Route("Roportajlar")]
+        [Route("Roportajlar")]
         public ActionResult Roportajlar(int? Sayfa)
         {
 
             int _sayfaNo = Sayfa ?? 1;
 
-            string title = "Ropörtajlar";
+            string title = "Biyografiler";
             ViewBag.title = title;
             ViewBag.desc = title;
             ViewBag.keywords = title;
             ViewBag.bilgi = title;
 
 
-            var haberler = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 3).OrderByDescending(h => h.Tarih).ToPagedList<Haberler>(_sayfaNo, 10);
+            var haberler = db.Haberler.Where(h => h.Aktif == true && h.KategoriId==3).OrderByDescending(h => h.Tarih).ToPagedList<Haberler>(_sayfaNo, 10);
 
             if (haberler.Count <= 0)
             {
-                ViewBag.bilgi = "Ropörtaj bulunamadı";
+                ViewBag.bilgi = "Biyografi bulunamadı";
             }
             var reklam = db.Slider.Where(s => s.SliderId == 13 || s.SliderId == 16).OrderBy(s => s.Sira).ToList();
             ViewData["detayReklam"] = reklam.Where(r => r.SliderId == 13).Take(5).ToList();
