@@ -27,6 +27,7 @@
 
                             <th>No</th>
                             <th>Kurum Adı</th>
+                            <th>Sponsorlar</th>
                             <th>Durum</th>
                             <th>Güncelle</th>
 
@@ -41,6 +42,7 @@
 
                                 <td>@item.KurumId</td>
                                 <td>@item.KurumAdi</td>
+                                <td>@item.Sponsorlar</td>
                                 <td>@(item.Durum == true ? "Aktif" : "Pasif")</td>
                                 <td><a href="/Admin/Kurum/Edit/@item.KurumId">Güncelle</a></td>
 
