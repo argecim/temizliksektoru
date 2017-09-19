@@ -472,7 +472,7 @@
                                         {
                                             <li><a href="#3dPopupEniyiTedarikciler" data-toggle="tab" style="color:blue;">3D Tanıtım</a></li>
                                         }
-                                        <li><a href="#ResimlerPopupEniyiTedarikciler" data-toggle="tab" style="color:blue;">Eğitimciler</a></li>
+                                        <li><a href="#ResimlerPopupEniyiTedarikciler" data-toggle="tab" style="color:blue;">Ürünler</a></li>
                                         <li><a href="#DetaylarPopupEniyiTedarikciler" data-toggle="tab" style="color:blue;">Detaylar</a></li>
                                     </ul>
                                     <div class="tab-content">
@@ -718,11 +718,11 @@
                                                     <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">TELEFON NO :</span></dt>
                                                     <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Tel</span></dd>
                                                 }
-                                                @if (Model.WebSitesi != null)
-                                                {
-                                                    <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">WEB SİTESİ :</span></dt>
-                                                    <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;"><a href="@Model.WebSitesi" target="_blank">@Model.WebSitesi</a></span></dd>
-                                                }
+                                               @if (Model.WebSitesi != null)
+                                               {
+                                                <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">WEB SİTESİ :</span></dt>
+                                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;color:#000000;"><a href="@Model.WebSitesi" target="_blank" style="font-weight:bold;margin-left:10px;color:#000000;">@Model.WebSitesi</a></span></dd>
+                                               }
                                                 @if (Model.Subeler != null)
                                                 {
                                                     <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">ŞUBELER :</span></dt>

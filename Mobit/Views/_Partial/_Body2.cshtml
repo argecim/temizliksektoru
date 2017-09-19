@@ -137,7 +137,7 @@
         </aside>
         <br />
         <div class="row">
-            @foreach (var item in Model.Slider.Where(s => s.SliderId == 11).Take(15).OrderBy(s => s.Sira))
+            @foreach (var item in Model.Slider.Where(s => s.SliderId == 11).Take(14).OrderBy(s => s.Sira))
             {
                 <div class="col-md-12" style="padding:7px;">
                     <a href="@item.Url" target="@item.Target">
