@@ -53,7 +53,7 @@ namespace Mobit.Areas.Admin.Controllers
 
             Random rnd = new Random();
             string resimAdi = Path.GetFileNameWithoutExtension(Resim.FileName) + "-" + rnd.Next(1, 100000) + Path.GetExtension(Resim.FileName);
-            var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/slide/"), resimAdi);
+            var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/slide"), resimAdi);
             Resim.SaveAs(yuklemeYeri);
 
             string target = "_blank";
@@ -112,7 +112,7 @@ namespace Mobit.Areas.Admin.Controllers
             {
                 Random rnd = new Random();
                 string resimAdi = Path.GetFileNameWithoutExtension(Resim.FileName) + "-" + rnd.Next(1, 100000) + Path.GetExtension(Resim.FileName);
-                var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/slide/"), resimAdi);
+                var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/slide"), resimAdi);
                 Resim.SaveAs(yuklemeYeri);
 
                 sld.Resim = resimAdi;

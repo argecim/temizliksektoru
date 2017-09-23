@@ -106,7 +106,7 @@ namespace Mobit.Areas.Admin.Controllers
                 {
                     Random rnd = new Random();
                     string dosyaAdi = Path.GetFileNameWithoutExtension(file.FileName) + "-" + rnd.Next(1, 10000) + Path.GetExtension(file.FileName);
-                    var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/galeri/" + galeri.GaleriYolu + "/"), dosyaAdi);
+                    var yuklemeYeri = Path.Combine(Server.MapPath("~/Upload/slide"), dosyaAdi);
                     file.SaveAs(yuklemeYeri);
 
                     GaleriResim resimler = new GaleriResim()
@@ -141,14 +141,8 @@ namespace Mobit.Areas.Admin.Controllers
                 return Redirect("/Admin/Gallery/images/" + galeri);
             }
 
-            FileInfo fi = new FileInfo(Server.MapPath("~/Upload/galeri/" + galeriBilgi.GaleriYolu + "/" + res.Resim));
-
             db.GaleriResim.Remove(res);
             db.SaveChanges();
-            if (System.IO.File.Exists(fi.ToString()))
-            {
-                //fi.Delete();
-            }
 
             return Redirect("/Admin/Gallery/images/" + galeri);
         }
@@ -169,23 +163,6 @@ namespace Mobit.Areas.Admin.Controllers
 
             db.Galeri.Remove(galeri);
             db.SaveChanges();
-
-            try
-            {
-                var folder = Server.MapPath("~/Upload/galeri/" + galeri.GaleriYolu);
-
-                if (Directory.Exists(folder))
-                {
-                    //Directory.Delete(folder);
-
-                }
-
-            }
-            catch (Exception)
-            {
-
-            }
-
 
 
             return RedirectToAction("Index");
