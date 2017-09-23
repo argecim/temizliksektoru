@@ -25,7 +25,14 @@ namespace Mobit.Areas.Admin.Controllers
             kategoriler();
             return View();
         }
+        public ActionResult SiraGetir()
+        {
 
+            var sira = db.Kurumlar.OrderByDescending(sl => sl.Sira).Select(s => s.Sira).FirstOrDefault();
+
+            sira = sira + 1;
+            return Content(sira.ToString());
+        }
         [HttpPost]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
@@ -203,6 +210,7 @@ namespace Mobit.Areas.Admin.Controllers
             kurumlar.D3Boyutlu = kurum.D3Boyutlu;
             kurumlar.Sponsorlar = kurum.Sponsorlar;
             kurumlar.Panoroma = kurum.Panoroma;
+            kurumlar.Sira = kurum.Sira;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

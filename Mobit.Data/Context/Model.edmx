@@ -265,7 +265,8 @@
           <Property Name="ServisBolgeleri" Type="nvarchar" MaxLength="500" />
           <Property Name="Sponsorlar" Type="nvarchar" MaxLength="500" />
           <Property Name="D3Boyutlu" Type="nvarchar" MaxLength="500" />
-          <Property Name="Eniyiler" Type="nvarchar" MaxLength="500" />
+          <Property Name="Eniyiler" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sira" Type="int" />
         </EntityType>
         <EntityType Name="KurumResim">
           <Key>
@@ -1197,7 +1198,8 @@ warning 6002: The table/view 'temizliksektoru.dbo.VW_Anketler' does not have a p
           <Property Name="ServisBolgeleri" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Sponsorlar" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="D3Boyutlu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Eniyiler" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Eniyiler" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Sira" Type="Int32" />
         </EntityType>
         <EntityType Name="KurumResim">
           <Key>
@@ -1888,6 +1890,7 @@ warning 6002: The table/view 'temizliksektoru.dbo.VW_Anketler' does not have a p
           <EntitySetMapping Name="Kurumlar">
             <EntityTypeMapping TypeName="Model.Kurumlar">
               <MappingFragment StoreEntitySet="Kurumlar">
+                <ScalarProperty Name="Sira" ColumnName="Sira" />
                 <ScalarProperty Name="Eniyiler" ColumnName="Eniyiler" />
                 <ScalarProperty Name="D3Boyutlu" ColumnName="D3Boyutlu" />
                 <ScalarProperty Name="Sponsorlar" ColumnName="Sponsorlar" />

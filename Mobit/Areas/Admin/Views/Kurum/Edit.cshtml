@@ -67,7 +67,13 @@
                         <input type="file" name="resimYukle" id="resimYukle" accept="image/*" />
                     </div>
                 </div>
-
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sira, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.Sira, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Sira, "", new { @class = "text-danger" })
+                    </div>
+                </div>
                 <div class="form-group">
                     @Html.LabelFor(model => model.KurumAdi, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-6">
@@ -346,7 +352,7 @@
                                     <select name="ResimTipi" class="form-control ">
                                         <option value="1">Resim</option>
                                         <option value="2">3D Resim</option>
-                                        <option value="3">Eğitimciler</option>
+                                        <option value="3">Ürünler</option>
                                         <option value="4">Aktiviteler</option>
                                     </select>
                                     <br /><br />

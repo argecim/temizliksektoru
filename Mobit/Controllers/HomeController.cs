@@ -25,27 +25,21 @@ namespace Mobit.Controllers
             Slider();
 
             GelismisAramaBilgi();
+            var haberler = db.Haberler.ToList();
 
-            ViewData["HaberlerPopup"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 4).ToList();
-            ViewData["RoportajlarPopup"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 3).ToList();
+            ViewData["HaberlerPopup"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 4).ToList();
+            ViewData["RoportajlarPopup"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 3).ToList();
 
-            ViewData["HaberPopupEniyiAnaokulu"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 13).ToList();
-            ViewData["HaberPopupEniyiKoleji"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 14).ToList();
-            ViewData["HaberPopupEniyiUniversitesi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 15).ToList();
-            ViewData["HaberPopupEniyiKursu"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 16).ToList();
-            ViewData["HaberPopupEniyiTedarikcisi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 17).ToList();
-            ViewData["HaberPopupEniyiOkulServisi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 18).ToList();
+            ViewData["HaberPopupAyinEniyiTemizlikSirketi"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 19).ToList();
+            ViewData["HaberPopupAyinEniyiTedarikcisi"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 20).ToList();
+            ViewData["HaberPopupAyinEniyiUrunu"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 21).ToList();
+            ViewData["HaberPopupAyinEniyiUreticiFirmasi"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 25).ToList();
+            ViewData["HaberPopupAyinEniyiKuruTemizlemecisi"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 26).ToList();
+            ViewData["HaberPopupAyinEniyiMakinaUreticisi"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 27).ToList();
 
-            ViewData["HaberPopupAyinEniyiTemizlikSirketi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 19).ToList();
-            ViewData["HaberPopupAyinEniyiTedarikcisi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 20).ToList();
-            ViewData["HaberPopupAyinEniyiUrunu"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 21).ToList();
-            ViewData["HaberPopupAyinEniyiUreticiFirmasi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 25).ToList();
-            ViewData["HaberPopupAyinEniyiKuruTemizlemecisi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 26).ToList();
-            ViewData["HaberPopupAyinEniyiMakinaUreticisi"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 27).ToList();
-
-            ViewData["PopupEniyiTedarikciler"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 24).ToList();
-            ViewData["PopupEniyiTemizlikSirketleri"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 22).ToList();
-            ViewData["PopupEniyiUrunler"] = db.Haberler.Where(h => h.Aktif == true && h.KategoriId == 23).ToList();
+            ViewData["PopupEniyiTedarikciler"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 24).ToList();
+            ViewData["PopupEniyiTemizlikSirketleri"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 22).ToList();
+            ViewData["PopupEniyiUrunler"] = haberler.Where(h => h.Aktif == true && h.KategoriId == 23).ToList();
             return View();
         }
         //[Route("Anketler")]
