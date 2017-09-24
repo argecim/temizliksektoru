@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-
+    <br />
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -80,7 +80,7 @@
                                         {
                                             <li><a href="#3d" data-toggle="tab">3D Tanıtım</a></li>
                                         }
-                                        
+
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="slayt">
@@ -103,7 +103,7 @@
                                                                         {
                                                                             <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:400px;">
                                                                         }
-                                                                        
+
                                                                         <span class="thumb-info-title">
                                                                             <span class="thumb-info-inner">@resim.Aciklama</span>
                                                                             <span class="thumb-info-type">@resim.Kurumlar.KurumAdi</span>
@@ -152,7 +152,7 @@
                                                             <div class="image-gallery-item">
                                                                 <span class="thumb-info thumb-info-lighten">
                                                                     <span class="thumb-info-wrapper">
-                                                                        
+
                                                                         @if (@Model.Kurumlar.Sponsorlar != null)
                                                                         {
                                                                             <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:400px;">
@@ -188,7 +188,7 @@
                                                                         {
                                                                             <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="height:150px;">
                                                                         }
-                                                                        
+
                                                                         <span class="thumb-info-title">
                                                                             <span class="thumb-info-inner" style="font-size:15px;">@resim.Aciklama</span>
                                                                         </span>
@@ -290,7 +290,7 @@
                         @if (Model.Kurumlar.KurumEgitimciler.Where(r => r.Tip == 1).Count() > 0)
                         {
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#egitimciler" data-toggle="tab">ÇALIŞANLAR</a></li>
+                                <li class="active"><a href="#egitimciler" data-toggle="tab">ÜRÜNLER</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="egitimciler">
@@ -307,11 +307,11 @@
                                                             <span class="thumb-info-wrapper">
                                                                 @if (@Model.Kurumlar.Sponsorlar != null)
                                                                 {
-                                                                <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
+                                                                    <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
                                                                 }
                                                                 else
                                                                 {
-                                                                <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
+                                                                    <img src="~/Upload/slide/@resim.Resim" class="img-responsive" alt="@Model.Kurumlar.KurumAdi" title="@Model.Kurumlar.KurumAdi" style="width:100%;height:500px;">
                                                                 }
                                                                 <span class="thumb-info-title">
                                                                     <span class="thumb-info-inner">@resim.Aciklama</span>
@@ -353,8 +353,8 @@
                                 </div>
                             </div>
                         }
-                        
-                        
+
+
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -377,105 +377,105 @@
                                             <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">TELEFON NO :</span></dt>
                                             <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Tel</span></dd>
                                         }
-                                    @if (Model.Kurumlar.TicSicNo != null)
+                                        @if (Model.Kurumlar.TicSicNo != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">TİC. SİC NO :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.TicSicNo</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">TİC. SİC NO :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.TicSicNo</span></dd>
                                     }
-                                    @if (Model.Kurumlar.KaliteBelgeNo != null)
+                                        @if (Model.Kurumlar.KaliteBelgeNo != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">KALİTE BELGE NO :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.KaliteBelgeNo</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">KALİTE BELGE NO :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.KaliteBelgeNo</span></dd>
                                     }
-                                    @if (Model.Kurumlar.FiyatAraligi != null)
+                                        @if (Model.Kurumlar.FiyatAraligi != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">FİYAT ARALIĞI :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.FiyatAraligi</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">FİYAT ARALIĞI :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.FiyatAraligi</span></dd>
                                     }
-                                    @if (Model.Kurumlar.Kurucusu != null)
+                                        @if (Model.Kurumlar.Kurucusu != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">YÖNETİM KUR BAŞKANI :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Kurucusu</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">YÖNETİM KUR BAŞKANI :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Kurucusu</span></dd>
                                     }
-                                    @if (Model.Kurumlar.KurumMuduru != null)
+                                        @if (Model.Kurumlar.KurumMuduru != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">GENEL MÜDÜR :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.KurumMuduru</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">GENEL MÜDÜR :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.KurumMuduru</span></dd>
                                     }
-                                    @if (Model.Kurumlar.MudurYardimcilari != null)
+                                        @if (Model.Kurumlar.MudurYardimcilari != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">SATIŞ PAZ. MÜDÜRÜ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MudurYardimcilari</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">SATIŞ PAZ. MÜDÜRÜ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MudurYardimcilari</span></dd>
                                     }
-                                    @if (Model.Kurumlar.Fax != null)
+                                        @if (Model.Kurumlar.Fax != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">FAKS :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Fax</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">FAKS :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Fax</span></dd>
                                     }
-                                    @if (Model.Kurumlar.Email != null)
+                                        @if (Model.Kurumlar.Email != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">E-MAİL :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Email</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">E-MAİL :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Email</span></dd>
                                     }
-                                    @if (Model.Kurumlar.WebSitesi != null)
+                                        @if (Model.Kurumlar.WebSitesi != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">WEB ADRESİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;"><a href="@Model.Kurumlar.WebSitesi" target="_blank">@Model.Kurumlar.WebSitesi</a></span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">WEB ADRESİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;"><a href="@Model.Kurumlar.WebSitesi" target="_blank">@Model.Kurumlar.WebSitesi</a></span></dd>
                                     }
 
-                                    @if (Model.Kurumlar.BagliDernek != null)
+                                        @if (Model.Kurumlar.BagliDernek != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNE YAKLAŞIK TESLİM SÜRESİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.TeslimSuresi</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNE YAKLAŞIK TESLİM SÜRESİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.TeslimSuresi</span></dd>
                                     }
-                                    @if (Model.Kurumlar.GarantiSuresi != null)
+                                        @if (Model.Kurumlar.GarantiSuresi != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">GARANTİ SÜRESİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.GarantiSuresi</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">GARANTİ SÜRESİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.GarantiSuresi</span></dd>
                                     }
-                                    @if (Model.Kurumlar.MakineCesitleri != null)
+                                        @if (Model.Kurumlar.MakineCesitleri != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNA ÇEŞİTLERİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MakineCesitleri</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNA ÇEŞİTLERİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MakineCesitleri</span></dd>
                                     }
-                                    @if (Model.Kurumlar.MakineOzellikleri != null)
+                                        @if (Model.Kurumlar.MakineOzellikleri != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNANIN  ÖZELLİKLERİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MakineOzellikleri</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">MAKİNANIN  ÖZELLİKLERİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.MakineOzellikleri</span></dd>
                                     }
-                                    @if (Model.Kurumlar.DigerMakinalar != null)
+                                        @if (Model.Kurumlar.DigerMakinalar != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">DİĞER MARKALARI :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.DigerMakinalar</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">DİĞER MARKALARI :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.DigerMakinalar</span></dd>
                                     }
-                                    
 
-                                    @if (Model.Kurumlar.BagliDernek != null)
+
+                                        @if (Model.Kurumlar.BagliDernek != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">BAĞLI OLDUĞU DERNEK :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.BagliDernek</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">BAĞLI OLDUĞU DERNEK :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.BagliDernek</span></dd>
                                     }
-                                    @if (Model.Kurumlar.YaptigiHizmetler != null)
+                                        @if (Model.Kurumlar.YaptigiHizmetler != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">YAPTIĞI HİZMETLER :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.YaptigiHizmetler</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">YAPTIĞI HİZMETLER :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.YaptigiHizmetler</span></dd>
                                     }
-                                    @if (Model.Kurumlar.Referanslar != null)
+                                        @if (Model.Kurumlar.Referanslar != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">REFARANSLARI :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Referanslar</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">REFARANSLARI :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.Referanslar</span></dd>
                                     }
-                                    @if (Model.Kurumlar.ServisBolgeleri != null)
+                                        @if (Model.Kurumlar.ServisBolgeleri != null)
                                     {
-                                        <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">SERVİS BÖLGELERİ :</span></dt>
-                                        <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.ServisBolgeleri</span></dd>
+                                            <dt style="background-color:#FFF;width:95%;"><span style="color:red;font-weight:bold;margin-left:10px;">SERVİS BÖLGELERİ :</span></dt>
+                                            <dd style="width:95%;background-color:#FFF;"><span style="font-weight:bold;margin-left:10px;">@Model.Kurumlar.ServisBolgeleri</span></dd>
                                     }
-                                    
+
                                     </dl>
                                 </div>
                             </div>
                         }
-                        
+
                     </div>
 
 
@@ -484,47 +484,48 @@
 
             </div>
 
-        <div class="col-md-12">
-            <hr />
-            @if (ViewData["detayReklam"] != null)
+            <div class="col-md-12">
+                <hr />
+                @if (ViewData["detayReklam"] != null)
             {
-                @*foreach (var item in ViewData["detayReklam"] as List<Mobit.Data.Context.Slider>)
-                {
-                    <div class="col-md-12">
-                        <a href="@item.Url" target="@item.Target">
-                            <img class="img-responsive img-thumbnail" src="~/Upload/slide/@item.Resim" width="100%" alt="@item.Baslik">
-                        </a>
-                    </div>
-                }*@
-
-                <div class="col-md-12" style="margin-left:-28px;">
-                    <ul class="image-gallery sort-destination full-width">
-
-                        @foreach (var item in ViewData["detayReklam"] as List<Mobit.Data.Context.Slider>)
+                    @*foreach (var item in ViewData["detayReklam"] as List<Mobit.Data.Context.Slider>)
                         {
-                            <li class="isotope-item">
-                                <div class="image-gallery-item" style="padding:5px;">
-                                    <a href="@item.Url" target="@item.Target">
-                                        <span class="thumb-info thumb-info-centered-info">
-                                            <span class="thumb-info-wrapper">
-                                                <img src="~/Upload/slide/@item.Resim" class="img-responsive img-thumbnail" alt="@item.Resim" style="height:300px;">
+                            <div class="col-md-12">
+                                <a href="@item.Url" target="@item.Target">
+                                    <img class="img-responsive img-thumbnail" src="~/Upload/slide/@item.Resim" width="100%" alt="@item.Baslik">
+                                </a>
+                            </div>
+                        }*@
+
+                    <div class="col-md-12" style="margin-left:-28px;">
+                        <ul class="image-gallery sort-destination full-width">
+
+                            @foreach (var item in ViewData["detayReklam"] as List<Mobit.Data.Context.Slider>)
+                        {
+                                <li class="isotope-item">
+                                    <div class="image-gallery-item" style="padding:5px;">
+                                        <a href="@item.Url" target="@item.Target">
+                                            <span class="thumb-info thumb-info-centered-info">
+                                                <span class="thumb-info-wrapper">
+                                                    <img src="~/Upload/slide/@item.Resim" class="img-responsive img-thumbnail" alt="@item.Resim" style="height:300px;">
+                                                </span>
                                             </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
+                                        </a>
+                                    </div>
+                                </li>
                         }
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
 
 
             }
+            </div>
+
+
+
+
+
         </div>
 
-
-
-
-        
     </div>
-
 </div>

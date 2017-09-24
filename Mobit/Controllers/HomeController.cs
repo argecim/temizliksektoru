@@ -167,7 +167,7 @@ namespace Mobit.Controllers
 
         }
 
-        //[Route("Home/Arama")]
+        [Route("Home/Arama")]
         [HttpPost]
         public async Task<PartialViewResult> Arama(string searchKey)
         {
