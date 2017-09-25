@@ -16,7 +16,7 @@ namespace Mobit.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            var kurumlar = db.Kurumlar.ToList();
+            var kurumlar = db.Kurumlar.Where(k => k.Sponsorlar == null || k.Sponsorlar == "").ToList();
 
             return View(kurumlar);
         }
@@ -338,7 +338,7 @@ namespace Mobit.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult FileUpload(List<HttpPostedFileBase> galeriResim, int kurumId, string uploadYol,string ResimTipi, string aciklama)
+        public ActionResult FileUpload(List<HttpPostedFileBase> galeriResim, int kurumId, string uploadYol, string ResimTipi, string aciklama)
         {
             if (galeriResim == null)
             {
@@ -375,7 +375,7 @@ namespace Mobit.Areas.Admin.Controllers
 
             return Redirect("/Admin/Kurum/Edit/" + kurumId);
         }
-    public ActionResult FileUploadEgitimciYonetici(List<HttpPostedFileBase> galeriResim, int kurumId, string uploadYol,string ResimTipi, string aciklama)
+        public ActionResult FileUploadEgitimciYonetici(List<HttpPostedFileBase> galeriResim, int kurumId, string uploadYol, string ResimTipi, string aciklama)
         {
             if (galeriResim == null)
             {
