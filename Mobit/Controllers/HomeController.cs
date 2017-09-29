@@ -380,7 +380,7 @@ namespace Mobit.Controllers
             }
             else if (arama.KategoriId != 0 && arama.ilId != 0 && arama.AltKategoriId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {
-                kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId && k.AltKategoriId == arama.AltKategoriId && k.ilId == arama.ilId  && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
+                kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId && k.AltKategoriId == arama.AltKategoriId && k.ilId == arama.ilId && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
             }
             else if (arama.KategoriId != 0 && arama.ilId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {
@@ -388,7 +388,7 @@ namespace Mobit.Controllers
             }
             else if (arama.KategoriId != 0 && arama.AltKategoriId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {
-                kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId &&  k.AltKategoriId== arama.AltKategoriId && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
+                kurumlar = db.Kurumlar.Where(k => k.KategoriId == arama.KategoriId && k.AltKategoriId == arama.AltKategoriId && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
             }
             else if (arama.KategoriId != 0 && string.IsNullOrEmpty(arama.SearchKey))
             {
@@ -400,7 +400,7 @@ namespace Mobit.Controllers
             }
             else
             {
-                kurumlar = db.Kurumlar.Where(k => k.KurumAdi.Contains(arama.SearchKey) && k.Durum == true).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
+                kurumlar = db.Kurumlar.Where(k => k.KurumAdi.Contains(arama.SearchKey) && k.Durum == true && k.Sponsorlar == null).OrderByDescending(u => u.KurumId).ToPagedList<Kurumlar>(_sayfaNo, 20);
             }
 
             if (kurumlar.Count == 0)
