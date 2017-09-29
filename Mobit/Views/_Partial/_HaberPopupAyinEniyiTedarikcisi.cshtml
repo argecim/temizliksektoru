@@ -480,7 +480,7 @@
                                             <div id="jssor_haberlerHaberPopupAyinEniyiTedarikcisi" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
                                                 <!-- Loading Screen -->
                                                 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"  src="~/Content/slider/svg/loading/static-svg/spin.svg" alt="okullar, anaokulları, ilkokullar, ortaokullar, liseler, kolejler, meslek okulları, yurtlar,kurslar, dershaneler, üniversiteler, öğrenci servisleri, okul servisleri, yabancı dil, kursları, yurt dışı eğitim, istanbul okulları, istanbul kolejler, istanbul anaokulları, istanbul okul haberleri, istanbul üniversiteler, istanbul yurtlar, kız yurtları, erkek yurtları, sürücü kursları, sanat kursları, istanbul liseler ,istanbuldaki okullar, istanbuldaki kolejler, burslu okullar, kreşler, istanbul kreşler, kız yurtları ,erkek yurtları"   />
                                                 </div>
                                                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
                                                     @foreach (var resim in db.Haberler.Where(r => r.KategoriId == 20).OrderByDescending(u => u.Id))
@@ -526,15 +526,15 @@
                                             <div id="jssor_slaytHaberPopupAyinEniyiTedarikcisi" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
                                                 <!-- Loading Screen -->
                                                 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"  src="~/Content/slider/svg/loading/static-svg/spin.svg" alt="okullar, anaokulları, ilkokullar, ortaokullar, liseler, kolejler, meslek okulları, yurtlar,kurslar, dershaneler, üniversiteler, öğrenci servisleri, okul servisleri, yabancı dil, kursları, yurt dışı eğitim, istanbul okulları, istanbul kolejler, istanbul anaokulları, istanbul okul haberleri, istanbul üniversiteler, istanbul yurtlar, kız yurtları, erkek yurtları, sürücü kursları, sanat kursları, istanbul liseler ,istanbuldaki okullar, istanbuldaki kolejler, burslu okullar, kreşler, istanbul kreşler, kız yurtları ,erkek yurtları"   />
                                                 </div>
                                                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
                                                     @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 1 && r.KurumId == Model.KurumId))
                                                     {
                                                         <div>
-                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                             <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                         </div>
                                                     }
                                                 </div>
@@ -572,15 +572,15 @@
                                             <div id="jssor_aktivitelerHaberPopupAyinEniyiTedarikcisi" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
                                                 <!-- Loading Screen -->
                                                 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"  src="~/Content/slider/svg/loading/static-svg/spin.svg" alt="okullar, anaokulları, ilkokullar, ortaokullar, liseler, kolejler, meslek okulları, yurtlar,kurslar, dershaneler, üniversiteler, öğrenci servisleri, okul servisleri, yabancı dil, kursları, yurt dışı eğitim, istanbul okulları, istanbul kolejler, istanbul anaokulları, istanbul okul haberleri, istanbul üniversiteler, istanbul yurtlar, kız yurtları, erkek yurtları, sürücü kursları, sanat kursları, istanbul liseler ,istanbuldaki okullar, istanbuldaki kolejler, burslu okullar, kreşler, istanbul kreşler, kız yurtları ,erkek yurtları"   />
                                                 </div>
                                                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
                                                     @foreach (var resim in db.KurumResim.Where(r => r.ResimTipi == 4 && r.KurumId == Model.KurumId))
                                                     {
                                                         <div>
-                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                             <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                         </div>
                                                     }
                                                 </div>
@@ -663,15 +663,15 @@
                                             <div id="jssor_ResimlerHaberPopupAyinEniyiTedarikcisi" style="position:relative;margin:0 auto;top:0px;left:0px;width:960px;height:420px;overflow:hidden;visibility:hidden;background-color:#24262e;">
                                                 <!-- Loading Screen -->
                                                 <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/slider/svg/loading/static-svg/spin.svg" />
+                                                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"  src="~/Content/slider/svg/loading/static-svg/spin.svg" alt="okullar, anaokulları, ilkokullar, ortaokullar, liseler, kolejler, meslek okulları, yurtlar,kurslar, dershaneler, üniversiteler, öğrenci servisleri, okul servisleri, yabancı dil, kursları, yurt dışı eğitim, istanbul okulları, istanbul kolejler, istanbul anaokulları, istanbul okul haberleri, istanbul üniversiteler, istanbul yurtlar, kız yurtları, erkek yurtları, sürücü kursları, sanat kursları, istanbul liseler ,istanbuldaki okullar, istanbuldaki kolejler, burslu okullar, kreşler, istanbul kreşler, kız yurtları ,erkek yurtları"   />
                                                 </div>
                                                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:240px;width:720px;height:420px;overflow:hidden;">
                                                     @foreach (var resim in db.KurumEgitimciler.Where(r => r.Tip == 1 && r.KurumId == Model.KurumId))
                                                     {
                                                         <div>
-                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="image" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                             <div style="position:absolute;top:80px;width:700px;height:40px;font-size:36px;color:#fff;line-height:40px;">@Html.Raw(resim.Aciklama)</div>
-                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Aciklama" title="@resim.Aciklama" />
+                                                            <img data-u="thumb" src="~/Upload/slide/@resim.Resim" alt="@resim.Resim" title="@resim.Resim" />
                                                         </div>
                                                     }
                                                 </div>
